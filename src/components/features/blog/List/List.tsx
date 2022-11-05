@@ -10,7 +10,10 @@ export const BlogList = () => {
       itemLayout="horizontal"
       dataSource={BlogItems}
       renderItem={(item) => (
-        <List.Item onClick={() => blogItemOnClick({ link: item.link })}>
+        <List.Item
+          style={{ cursor: "pointer" }}
+          onClick={() => blogItemOnClick({ link: item.link })}
+        >
           <List.Item.Meta
             avatar={<Avatar src={item.icon} />}
             title={item.title}
