@@ -1,5 +1,5 @@
-import { BlogItems } from "@/assets/blogItem";
 import { Avatar, List } from "antd";
+import { BlogItems } from "@/assets/blogItems";
 
 export const BlogList = () => {
   const blogItemOnClick = ({ link }: { link: string }) => {
