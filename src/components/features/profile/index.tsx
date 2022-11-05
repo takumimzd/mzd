@@ -34,7 +34,7 @@ export const Profile = () => {
         </Timeline>
       </div>
       <div>
-        <Title level={3}>Skills</Title>
+        <Title level={3}>Skill</Title>
         <Title level={4}>Frontend</Title>
         <Paragraph>
           Javascript / Typescript / React.js / Next.js / Redux
