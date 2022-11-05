@@ -18,6 +18,7 @@
     // pagesをsrc配下に移動させてもルーティングが正しく設定される
     "baseUrl": "./",
     "paths": {
+      "@/assets/*": ["src/assets/*"],
       "@/components/*": ["src/components/*"],
       "@/constants/*": ["src/constants/*"],
       "@/pages/*": ["src/pages/*"],
