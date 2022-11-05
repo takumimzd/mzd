@@ -22,7 +22,7 @@ export const BasicInfomation = () => {
           />
           <Center margin="16px 0 0 0">
             <Title style={{ marginRight: "4px" }} level={3}>
-              mzd
+              神尾 拓未
             </Title>
             {MyAccountItems.map((item) => (
               <div key={item.service} style={{ marginBottom: "11px" }}>
@@ -39,7 +39,6 @@ export const BasicInfomation = () => {
           <Paragraph style={{ textAlign: "center", marginBottom: "0" }}>
             Software Developer
           </Paragraph>
-          <Paragraph>Frontend / Typescript / React / Next</Paragraph>
         </div>
       </Center>
     </div>
