@@ -27,7 +27,7 @@ export const BasicInfomation = () => {
             {MyAccountItems.map((item) => (
               <div key={item.service} style={{ marginBottom: "11px" }}>
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  <Avatar src={item.icon} size="small" />
+                  <Avatar src={item.icon} />
                 </a>
               </div>
             ))}
