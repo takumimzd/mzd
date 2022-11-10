@@ -37,7 +37,8 @@ export const BasicInfomation = () => {
       <Center>
         <div>
           <Paragraph style={{ textAlign: "center", marginBottom: "0" }}>
-            Software Developer
+            ソフトウェアエンジニア / スクラムマスター / 27歳 /
+            横浜育ち名古屋住み / 猫好き / テニス好き
           </Paragraph>
         </div>
       </Center>
