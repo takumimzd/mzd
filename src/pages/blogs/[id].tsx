@@ -29,24 +29,24 @@ const Blog = () => {
         </Breadcrumb.Item>
       </Breadcrumb>
       <Center>
-        <div>
-          <CircleImage
-            src={blog.icon}
-            size={{
-              width: 150,
-              height: 150,
-            }}
-            alt="profile main image"
-          />
-          <Title style={{ margin: "16px 0 0 0" }} level={3}>
-            {blog.title}
-          </Title>
-        </div>
+        <CircleImage
+          src={blog.icon}
+          size={{
+            width: 150,
+            height: 150,
+          }}
+          alt="profile main image"
+        />
+      </Center>
+      <Center>
+        <Title style={{ margin: "16px 0 0 0" }} level={3}>
+          {blog.title}
+        </Title>
       </Center>
       <Center>
         <div
           style={{
-            margin: "16px 0 32px 0",
+            margin: "32px 0 32px 0",
             backgroundColor: "#FFFAFA",
             boxShadow: "0px 3px 3px rgba(0, 0, 0, 0.2)",
             width: isPc ? "75%" : "100%",
