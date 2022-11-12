@@ -1,6 +1,6 @@
 import zennProfileImage from "../../../public/zenn-profile.jpg";
 import profileMainImage from "../../../public/profile.webp";
-import { Blog1Body } from "./blog1";
+import { OtherBlogItemType } from "@/types/Blog";
 
 export const TechBlogItems = [
   {
@@ -29,14 +29,5 @@ export const TechBlogItems = [
     link: "https://tech.stmn.co.jp/entry/2021/05/17/155842",
   },
 ];
-
-interface OtherBlogItemType {
-  id: number;
-  icon: string;
-  title: string;
-  body: string;
-  date: string;
-  link: string;
-}
 
 export const OtherBlogItems: OtherBlogItemType[] = [];
