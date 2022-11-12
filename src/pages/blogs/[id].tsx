@@ -1,4 +1,7 @@
-import { Typography } from "antd";
+import Link from "next/link";
+
+import { Typography, Breadcrumb } from "antd";
+import { LeftOutlined } from "@ant-design/icons";
 
 import { MarkdownView } from "@/components/common/Markdown";
 import { Center } from "@/components/common/Layout";
@@ -17,6 +20,14 @@ const Blog = () => {
 
   return (
     <div style={{ margin: "32px" }}>
+      <Breadcrumb>
+        <Breadcrumb.Item>
+          <Link href="/">
+            <LeftOutlined />
+            <span style={{ marginLeft: "4px" }}>Home</span>
+          </Link>
+        </Breadcrumb.Item>
+      </Breadcrumb>
       <Center>
         <div>
           <CircleImage

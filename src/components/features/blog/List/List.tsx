@@ -10,8 +10,8 @@ export const BlogList = () => {
   };
   return (
     <>
-      <div style={{ marginBottom: "32px" }}>
-        <Title level={3}>Tech Blog</Title>
+      <div style={{ marginBottom: "16px" }}>
+        <Title level={3}>Tech</Title>
         <List
           itemLayout="horizontal"
           dataSource={TechBlogItems}
@@ -29,7 +29,7 @@ export const BlogList = () => {
           )}
         />
       </div>
-      <Title level={3}>Other Blog</Title>
+      <Title level={3}>Other</Title>
       <List
         itemLayout="horizontal"
         dataSource={OtherBlogItems}
