@@ -53,7 +53,7 @@ export const OtherBlogItems: OtherBlogItemType[] = [
   {
     id: 1,
     icon: profileMainImage.src,
-    title: "『あひるの空』の好きな名言",
+    title: "あひるの空の好きな言葉",
     body: Blog1Body,
     date: "2022/11/12",
     link: "1",
