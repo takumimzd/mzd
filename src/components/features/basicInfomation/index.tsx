@@ -1,9 +1,9 @@
 import { Avatar, Typography } from "antd";
-import { CircleImage } from "@/components/common/Image/CircleImage";
-import { Center } from "@/components/common/Layout/Center";
+import { Center } from "@/components/common/Layout";
 
 import profileMainImage from "@/public/profile.webp";
 import { MyAccountItems } from "@/assets/myAccountItems";
+import { CircleImage } from "@/components/common/Image";
 
 const { Title, Paragraph } = Typography;
 
