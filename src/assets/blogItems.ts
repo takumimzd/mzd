@@ -34,7 +34,7 @@ export const OtherBlogItems = [
     id: 1,
     icon: `${profileMainImage.src}`,
     title: "ページ内ブログ",
-    body: "## ページ内ブログ",
+    body: "## ページ内ブログaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     date: "2021/05/17",
     link: `${1}`,
   },

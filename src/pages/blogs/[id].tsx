@@ -1,17 +1,49 @@
+import { Typography } from "antd";
+
 import { MarkdownView } from "@/components/common/Markdown";
+import { Center } from "@/components/common/Layout";
+import { CircleImage } from "@/components/common/Image";
 import { useGetBlog } from "@/components/features/blog/hooks/useGetBlog";
+
+import { useIsPcWindow } from "src/hooks/useIsPcWindow";
+
+const { Title } = Typography;
 
 const Blog = () => {
   const { blog, isLoading } = useGetBlog();
+  const { isPc } = useIsPcWindow();
 
-  if (isLoading) return null;
-  if (!blog) return null;
+  if (isLoading || !blog || isPc === undefined) return null;
 
   return (
-    <div>
-      <p>{blog.title}</p>
-      <p>{blog.date}</p>
-      <MarkdownView>{blog.body}</MarkdownView>
+    <div style={{ margin: "32px" }}>
+      <Center>
+        <div>
+          <CircleImage
+            src={blog.icon}
+            size={{
+              width: 150,
+              height: 150,
+            }}
+            alt="profile main image"
+          />
+          <Title style={{ margin: "16px 0 0 0" }} level={3}>
+            {blog.title}
+          </Title>
+        </div>
+      </Center>
+      <Center>
+        <div
+          style={{
+            margin: "16px 0 0 0",
+            backgroundColor: "#FFFAFA",
+            maxWidth: isPc ? "65%" : "100%",
+            wordBreak: "break-all",
+          }}
+        >
+          <MarkdownView>{blog.body}</MarkdownView>
+        </div>
+      </Center>
     </div>
   );
 };
