@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import { Tabs } from "antd";
+
 import { BasicInfomation } from "@/components/features/basicInfomation";
 import { Profile } from "@/components/features/profile";
 import { BlogList } from "@/components/features/blog/List/List";
