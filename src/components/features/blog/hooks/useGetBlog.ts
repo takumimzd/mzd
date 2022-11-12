@@ -1,4 +1,4 @@
-import { OtherBlogItems } from "@/assets/blogItems";
+import { OtherBlogItems } from "@/assets/blog/blogItems";
 import { useRouter } from "next/router";
 
 export const useGetBlog = () => {

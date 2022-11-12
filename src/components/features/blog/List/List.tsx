@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Avatar, List, Typography } from "antd";
-import { TechBlogItems, OtherBlogItems } from "@/assets/blogItems";
+import { TechBlogItems, OtherBlogItems } from "@/assets/blog/blogItems";
 
 const { Title } = Typography;
 

@@ -1,5 +1,6 @@
-import zennProfileImage from "../../public/zenn-profile.jpg";
-import profileMainImage from "../../public/profile.webp";
+import zennProfileImage from "../../../public/zenn-profile.jpg";
+import profileMainImage from "../../../public/profile.webp";
+import { Blog1Body } from "./blog1";
 
 export const TechBlogItems = [
   {
@@ -34,7 +35,7 @@ export const OtherBlogItems = [
     id: 1,
     icon: `${profileMainImage.src}`,
     title: "ページ内ブログ",
-    body: "## ページ内ブログaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    body: Blog1Body,
     date: "2021/05/17",
     link: `${1}`,
   },
