@@ -49,7 +49,7 @@ const Blog = () => {
             margin: "16px 0 32px 0",
             backgroundColor: "#FFFAFA",
             boxShadow: "0px 3px 3px rgba(0, 0, 0, 0.2)",
-            maxWidth: isPc ? "75%" : "100%",
+            width: isPc ? "75%" : "100%",
             wordBreak: "break-all",
             padding: "16px",
           }}
