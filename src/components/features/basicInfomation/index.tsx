@@ -21,7 +21,14 @@ export const BasicInfomation = () => {
             }}
             alt="profile main image"
           />
-          <Center margin={`${MARGIN.M} 0 0 0`}>
+          <div
+            style={{
+              margin: `${MARGIN.M} 0 0 0`,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Title style={{ marginRight: MARGIN.XS }} level={3}>
               神尾 拓未
             </Title>
@@ -32,7 +39,7 @@ export const BasicInfomation = () => {
                 </a>
               </div>
             ))}
-          </Center>
+          </div>
         </div>
       </Center>
       <Center>

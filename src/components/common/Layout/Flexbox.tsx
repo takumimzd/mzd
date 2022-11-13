@@ -2,16 +2,16 @@ import React, { CSSProperties } from "react";
 
 interface Props {
   children: React.ReactNode;
-  style?: CSSProperties;
+  style: CSSProperties;
 }
-export const Center = ({ children, style }: Props) => {
+export const Flexbox = ({ children, style }: Props) => {
   return (
     <div
       style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         ...style,
-        display: "grid",
-        placeItems: "center",
-        width: "100%",
       }}
     >
       {children}

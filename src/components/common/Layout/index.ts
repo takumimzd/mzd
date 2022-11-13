@@ -1,3 +1,4 @@
 import { Center } from "./Center";
+import { Flexbox } from "./Flexbox";
 
-export { Center };
+export { Center, Flexbox };
