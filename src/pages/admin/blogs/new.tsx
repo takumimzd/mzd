@@ -22,11 +22,7 @@ const New = () => {
     setIsPreview((prev) => !prev);
   };
 
-  if (!isSignedIn) {
-    window.location.href = "/";
-  }
-
-  if (isPc === undefined) return null;
+  if (isPc === undefined || !isSignedIn) return null;
 
   return (
     <>
