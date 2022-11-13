@@ -4,12 +4,15 @@ import { Tooltip } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { MARGIN } from "@/constants/style";
 import { useIsPcWindow } from "src/hooks/useIsPcWindow";
+import { useSession } from "src/hooks/useSession";
 import { Center } from "@/components/common/Layout";
 import { Form } from "@/components/features/blog/New/Form/Form";
 import { Preview } from "@/components/features/blog/Preview";
 import { useCreateBlog } from "@/components/features/blog/hooks/useCreateBlog";
 
 const New = () => {
+  const { isSignedIn } = useSession();
+
   const { bodyText, onChangeBodyTextarea, title, onChangeTitleInput } =
     useCreateBlog();
   const [isPreview, setIsPreview] = useState(false);
@@ -18,6 +21,10 @@ const New = () => {
   const onChangeViewSwitch = () => {
     setIsPreview((prev) => !prev);
   };
+
+  if (!isSignedIn) {
+    window.location.href = "/";
+  }
 
   if (isPc === undefined) return null;
 

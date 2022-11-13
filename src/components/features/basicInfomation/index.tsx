@@ -1,14 +1,18 @@
+import Link from "next/link";
 import profileMainImage from "@/public/profile.webp";
 import { MyAccountItems } from "@/assets/myAccountItems";
-
 import { Avatar, Typography } from "antd";
+import { QuestionCircleOutlined } from "@ant-design/icons";
 import { MARGIN } from "@/constants/style";
 import { Center } from "@/components/common/Layout";
 import { CircleImage } from "@/components/common/Image";
 
+import { useSession } from "src/hooks/useSession";
+
 const { Title, Paragraph } = Typography;
 
 export const BasicInfomation = () => {
+  const { isSignedIn } = useSession();
   return (
     <div>
       <Center>
@@ -49,6 +53,11 @@ export const BasicInfomation = () => {
             横浜育ち名古屋住み / 猫好き / テニス好き
           </Paragraph>
         </div>
+        {isSignedIn && (
+          <Link href={"/admin/sign_in"} style={{ marginTop: "16px" }}>
+            <QuestionCircleOutlined style={{ fontSize: "24px" }} />
+          </Link>
+        )}
       </Center>
     </div>
   );
