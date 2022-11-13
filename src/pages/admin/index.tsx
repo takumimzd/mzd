@@ -3,9 +3,7 @@ import { useSession } from "src/hooks/useSession";
 
 const Admin = () => {
   const { isSignedIn } = useSession();
-  if (!isSignedIn) {
-    window.location.href = "/";
-  }
+  if (!isSignedIn) return null;
   return (
     <div>
       <Link href="/admin/new">
