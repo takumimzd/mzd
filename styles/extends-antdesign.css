@@ -1,3 +1,10 @@
+/* src/constants/style.ts */
+
 .ant-image-mask {
   border-radius: 50%;
+}
+
+.ant-list-item:hover {
+  background-color: #dcdcdc;
+  transition: background-color 900ms;
 }

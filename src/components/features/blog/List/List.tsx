@@ -1,30 +1,28 @@
 import Link from "next/link";
 import { Avatar, List, Typography } from "antd";
+import { MARGIN, PADDING } from "@/constants/style";
+
 import { TechBlogItems, OtherBlogItems } from "@/assets/blog/blogItems";
 
 const { Title } = Typography;
 
 export const BlogList = () => {
-  const blogItemOnClick = ({ link }: { link: string }) => {
-    window.open(link, "_blank");
-  };
   return (
     <>
-      <div style={{ marginBottom: "16px" }}>
+      <div style={{ marginBottom: MARGIN.M }}>
         <Title level={3}>Tech</Title>
         <List
           itemLayout="horizontal"
           dataSource={TechBlogItems}
           renderItem={(item) => (
-            <List.Item
-              style={{ cursor: "pointer" }}
-              onClick={() => blogItemOnClick({ link: item.link })}
-            >
-              <List.Item.Meta
-                avatar={<Avatar src={item.icon} />}
-                title={item.title}
-                description={item.date}
-              />
+            <List.Item style={{ display: "block", padding: PADDING.S }}>
+              <a href={item.link} target="_blank" rel="noreferrer">
+                <List.Item.Meta
+                  avatar={<Avatar src={item.icon} />}
+                  title={item.title}
+                  description={item.date}
+                />
+              </a>
             </List.Item>
           )}
         />
@@ -34,7 +32,7 @@ export const BlogList = () => {
         itemLayout="horizontal"
         dataSource={OtherBlogItems}
         renderItem={(item) => (
-          <List.Item style={{ display: "block" }}>
+          <List.Item style={{ display: "block", padding: PADDING.S }}>
             <Link href={`blogs/${item.link}`}>
               <List.Item.Meta
                 avatar={<Avatar src={item.icon} />}

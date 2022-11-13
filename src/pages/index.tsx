@@ -6,6 +6,7 @@ import { Tabs } from "antd";
 import { BasicInfomation } from "@/components/features/basicInfomation";
 import { Profile } from "@/components/features/profile";
 import { BlogList } from "@/components/features/blog/List/List";
+import { MARGIN } from "@/constants/style";
 
 const TabItems = [
   {
@@ -36,9 +37,9 @@ const Home = () => {
         <meta name="description" content="mzd profire" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ margin: "32px" }}>
+      <div style={{ margin: MARGIN.L }}>
         <BasicInfomation />
-        <div style={{ marginTop: "24px" }}>
+        <div style={{ marginTop: MARGIN.L }}>
           <Tabs items={TabItems} />
         </div>
       </div>

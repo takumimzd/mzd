@@ -2,6 +2,12 @@ import Link from "next/link";
 
 import { Typography, Breadcrumb } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
+import {
+  BLOG_BACKGROUND_COLOR,
+  BOX_SHADOW,
+  MARGIN,
+  PADDING,
+} from "@/constants/style";
 
 import { MarkdownView } from "@/components/common/Markdown";
 import { Center } from "@/components/common/Layout";
@@ -19,12 +25,12 @@ const Blog = () => {
   if (isLoading || !blog || isPc === undefined) return null;
 
   return (
-    <div style={{ margin: "32px" }}>
+    <div style={{ margin: MARGIN.L }}>
       <Breadcrumb>
         <Breadcrumb.Item>
           <Link href="/">
             <LeftOutlined />
-            <span style={{ marginLeft: "4px" }}>Home</span>
+            <span style={{ marginLeft: MARGIN.S }}>Home</span>
           </Link>
         </Breadcrumb.Item>
       </Breadcrumb>
@@ -39,19 +45,19 @@ const Blog = () => {
         />
       </Center>
       <Center>
-        <Title style={{ margin: "16px 0 0 0" }} level={3}>
+        <Title style={{ marginTop: MARGIN.M }} level={3}>
           {blog.title}
         </Title>
       </Center>
       <Center>
         <div
           style={{
-            margin: "32px 0 32px 0",
-            backgroundColor: "#FFFAFA",
-            boxShadow: "0px 3px 3px rgba(0, 0, 0, 0.2)",
+            margin: `${MARGIN.L} 0 ${MARGIN.L} 0`,
+            backgroundColor: BLOG_BACKGROUND_COLOR,
+            boxShadow: BOX_SHADOW.MAIN,
             width: isPc ? "75%" : "100%",
             wordBreak: "break-all",
-            padding: "16px",
+            padding: `${PADDING.M}`,
           }}
         >
           <MarkdownView>{blog.body}</MarkdownView>
