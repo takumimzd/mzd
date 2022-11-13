@@ -6,7 +6,7 @@ const Admin = () => {
   if (!isSignedIn) return null;
   return (
     <div>
-      <Link href="/admin/new">
+      <Link href="/admin/blogs/new">
         <p>New</p>
       </Link>
     </div>
