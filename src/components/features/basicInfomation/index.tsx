@@ -54,7 +54,7 @@ export const BasicInfomation = () => {
           </Paragraph>
         </div>
         {isSignedIn && (
-          <Link href={"/admin/sign_in"} style={{ marginTop: "16px" }}>
+          <Link href={"/admin"} style={{ marginTop: "16px" }}>
             <QuestionCircleOutlined style={{ fontSize: "24px" }} />
           </Link>
         )}
