@@ -1,9 +1,8 @@
+import { BLOG_BACKGROUND_COLOR, BOX_SHADOW, PADDING } from "@/constants/style";
+
 import { Center } from "@/components/common/Layout";
 import { MarkdownView } from "@/components/common/Markdown";
-import { BLOG_BACKGROUND_COLOR, BOX_SHADOW, PADDING } from "@/constants/style";
-import { Typography } from "antd";
-
-const { Title } = Typography;
+import { Title } from "@/components/common/Typography";
 
 interface Props {
   isPc: boolean;

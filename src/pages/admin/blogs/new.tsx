@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { Switch } from "antd";
-import { Tooltip } from "antd";
-import { CaretRightOutlined } from "@ant-design/icons";
+
 import { MARGIN } from "@/constants/style";
-import { useIsPcWindow } from "src/hooks/useIsPcWindow";
-import { useSession } from "src/hooks/useSession";
+
 import { Center } from "@/components/common/Layout";
+import { Tooltip } from "@/components/common/Tooltip";
+import { CaretRightOutlined } from "@/components/common/Icon";
+import { Switch } from "@/components/common/Switch";
+
 import { Form } from "@/components/features/blog/New/Form/Form";
 import { Preview } from "@/components/features/blog/Preview";
 import { useCreateBlog } from "@/components/features/blog/hooks/useCreateBlog";
+
+import { useSession } from "@/hooks/useSession";
+import { useIsPcWindow } from "@/hooks/useIsPcWindow";
 
 const New = () => {
   const { isSignedIn } = useSession();

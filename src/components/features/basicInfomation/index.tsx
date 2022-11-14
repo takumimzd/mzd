@@ -1,15 +1,17 @@
 import Link from "next/link";
+
 import profileMainImage from "@/public/profile.webp";
 import { MyAccountItems } from "@/assets/myAccountItems";
-import { Avatar, Typography } from "antd";
-import { QuestionCircleOutlined } from "@ant-design/icons";
+
 import { MARGIN } from "@/constants/style";
+
 import { Center } from "@/components/common/Layout";
 import { CircleImage } from "@/components/common/Image";
+import { Title, Paragraph } from "@/components/common/Typography";
+import { QuestionCircleOutlined } from "@/components/common/Icon";
+import { Avatar } from "@/components/common/Avatar";
 
 import { useSession } from "src/hooks/useSession";
-
-const { Title, Paragraph } = Typography;
 
 export const BasicInfomation = () => {
   const { isSignedIn } = useSession();
