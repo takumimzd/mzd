@@ -27,25 +27,23 @@ export const BasicInfomation = () => {
             }}
             alt="profile main image"
           />
-          <div
-            style={{
-              margin: `${MARGIN.M} 0 0 0`,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Title style={{ marginRight: MARGIN.XS }} level={3}>
+          <Center>
+            <Title
+              style={{ marginRight: MARGIN.XS, marginTop: MARGIN.S }}
+              level={4}
+            >
               神尾 拓未
             </Title>
-            {MyAccountItems.map((item) => (
-              <div key={item.service} style={{ marginBottom: `${MARGIN.M}` }}>
-                <a href={item.link} target="_blank" rel="noreferrer">
-                  <Avatar src={item.icon} />
-                </a>
-              </div>
-            ))}
-          </div>
+            <div style={{ display: "flex" }}>
+              {MyAccountItems.map((item) => (
+                <div key={item.service} style={{ marginBottom: `${MARGIN.M}` }}>
+                  <a href={item.link} target="_blank" rel="noreferrer">
+                    <Avatar src={item.icon} />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </Center>
         </div>
       </Center>
       <Center>
