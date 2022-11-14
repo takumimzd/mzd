@@ -1,15 +1,16 @@
-import { Form as AntdForm, Input } from "antd";
+import { ChangeEvent } from "react";
+
 import { BLOG_BACKGROUND_COLOR, BOX_SHADOW, PADDING } from "@/constants/style";
-import { onChangeFormPropsType } from "../../hooks/useCreateBlog";
+
+import { Form as CommonForm, FormItem } from "@/components/common/Form";
+import { Input } from "@/components/common/Input";
+import { Textarea } from "@/components/common/Textarea";
+
 interface Props {
   bodyText: string;
-  onChangeBodyTextarea: ({
-    event,
-  }: onChangeFormPropsType<HTMLTextAreaElement>) => void;
+  onChangeBodyTextarea: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   title: string;
-  onChangeTitleInput: ({
-    event,
-  }: onChangeFormPropsType<HTMLInputElement>) => void;
+  onChangeTitleInput: (event: ChangeEvent<HTMLInputElement>) => void;
   isPc: boolean;
 }
 
@@ -20,9 +21,11 @@ export const Form = ({
   onChangeTitleInput,
   isPc,
 }: Props) => {
+  console.log({ title });
+
   return (
-    <AntdForm style={{ width: isPc ? "75%" : "100%" }}>
-      <AntdForm.Item name={["blog", "title"]}>
+    <CommonForm style={{ width: isPc ? "75%" : "100%" }}>
+      <FormItem name={["blog", "title"]}>
         <Input
           style={{
             backgroundColor: BLOG_BACKGROUND_COLOR,
@@ -30,19 +33,14 @@ export const Form = ({
             padding: `${PADDING.S}`,
             border: "none",
           }}
-          defaultValue={title}
-          onChange={(event) => {
-            onChangeTitleInput({ event });
-          }}
+          text={title}
+          onChange={onChangeTitleInput}
         />
-      </AntdForm.Item>
-      <AntdForm.Item name={["blog", "body"]}>
-        <Input.TextArea
-          onChange={(event) => {
-            onChangeBodyTextarea({ event });
-          }}
-          autoSize
-          defaultValue={bodyText}
+      </FormItem>
+      <FormItem name={["blog", "body"]}>
+        <Textarea
+          onChange={onChangeBodyTextarea}
+          text={bodyText}
           style={{
             minHeight: isPc ? "500px" : "300px",
             backgroundColor: BLOG_BACKGROUND_COLOR,
@@ -50,8 +48,8 @@ export const Form = ({
             padding: `${PADDING.M}`,
             border: "none",
           }}
-        ></Input.TextArea>
-      </AntdForm.Item>
-    </AntdForm>
+        />
+      </FormItem>
+    </CommonForm>
   );
 };

@@ -1,7 +1,6 @@
-import { Timeline, Typography } from "antd";
 import { CareerItems } from "@/assets/careerItems";
-
-const { Title, Paragraph } = Typography;
+import { Timeline, TimelineItem } from "@/components/common/Timeline";
+import { Paragraph, Title } from "@/components/common/Typography";
 
 export const Profile = () => {
   return (
@@ -10,11 +9,11 @@ export const Profile = () => {
         <Title level={3}>Career</Title>
         <Timeline>
           {CareerItems.map((item) => (
-            <Timeline.Item key={item.text}>
+            <TimelineItem key={item.text}>
               <a href={item.link} target="_blank" rel="noreferrer">
                 {item.text}
               </a>
-            </Timeline.Item>
+            </TimelineItem>
           ))}
         </Timeline>
       </div>

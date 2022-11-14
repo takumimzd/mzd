@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { Typography, Breadcrumb } from "antd";
-import { LeftOutlined } from "@ant-design/icons";
 import {
   BLOG_BACKGROUND_COLOR,
   BOX_SHADOW,
@@ -10,30 +8,34 @@ import {
 } from "@/constants/style";
 
 import { MarkdownView } from "@/components/common/Markdown";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
 import { Center } from "@/components/common/Layout";
 import { CircleImage } from "@/components/common/Image";
+import { LeftOutlined } from "@/components/common/Icon";
+import { Title } from "@/components/common/Typography";
+
 import { useGetBlog } from "@/components/features/blog/hooks/useGetBlog";
 
-import { useIsPcWindow } from "src/hooks/useIsPcWindow";
-
-const { Title } = Typography;
+import { useIsPcWindow } from "@/hooks/useIsPcWindow";
 
 const Blog = () => {
   const { blog, isLoading } = useGetBlog();
   const { isPc } = useIsPcWindow();
 
+  const breadcrumbItems = [
+    <div key="Home">
+      <Link href="/">
+        <LeftOutlined />
+        <span style={{ marginLeft: MARGIN.S }}>Home</span>
+      </Link>
+    </div>,
+  ];
+
   if (isLoading || !blog || isPc === undefined) return null;
 
   return (
     <div style={{ margin: MARGIN.L }}>
-      <Breadcrumb>
-        <Breadcrumb.Item>
-          <Link href="/">
-            <LeftOutlined />
-            <span style={{ marginLeft: MARGIN.S }}>Home</span>
-          </Link>
-        </Breadcrumb.Item>
-      </Breadcrumb>
+      <Breadcrumb items={breadcrumbItems} />
       <Center>
         <CircleImage
           src={blog.icon}
