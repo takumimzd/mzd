@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import profileMainImage from "@/public/profile.webp";
 import { MyAccountItems } from "@/assets/myAccountItems";
 
@@ -8,13 +6,9 @@ import { MARGIN } from "@/constants/style";
 import { Center } from "@/components/common/Layout";
 import { CircleImage } from "@/components/common/Image";
 import { Title, Paragraph } from "@/components/common/Typography";
-import { QuestionCircleOutlined } from "@/components/common/Icon";
 import { Avatar } from "@/components/common/Avatar";
 
-import { useSession } from "src/hooks/useSession";
-
 export const BasicInfomation = () => {
-  const { isSignedIn } = useSession();
   return (
     <div>
       <Center>
@@ -53,11 +47,6 @@ export const BasicInfomation = () => {
             横浜育ち名古屋住み / 猫好き / テニス好き
           </Paragraph>
         </div>
-        {isSignedIn && (
-          <Link href={"/admin"} style={{ marginTop: "16px" }}>
-            <QuestionCircleOutlined style={{ fontSize: "24px" }} />
-          </Link>
-        )}
       </Center>
     </div>
   );
