@@ -21,8 +21,6 @@ export const Form = ({
   onChangeTitleInput,
   isPc,
 }: Props) => {
-  console.log({ title });
-
   return (
     <CommonForm style={{ width: isPc ? "75%" : "100%" }}>
       <FormItem name={["blog", "title"]}>
