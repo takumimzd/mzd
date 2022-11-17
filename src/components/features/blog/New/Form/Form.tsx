@@ -33,17 +33,19 @@ export const Form = ({
           }}
           text={title}
           onChange={onChangeTitleInput}
+          placeholder="Title"
         />
       </FormItem>
       <FormItem name={["blog", "body"]}>
         <Textarea
           onChange={onChangeBodyTextarea}
           text={bodyText}
+          placeholder={`Write Contents\nMarkdown is available`}
           style={{
             minHeight: isPc ? "500px" : "300px",
             backgroundColor: BLOG_BACKGROUND_COLOR,
             boxShadow: BOX_SHADOW.MAIN,
-            padding: `${PADDING.M}`,
+            padding: `${PADDING.S}`,
             border: "none",
           }}
         />
