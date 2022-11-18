@@ -36,7 +36,7 @@ export const Form = ({
           placeholder="Title"
         />
       </FormItem>
-      <FormItem name={["blog", "body"]}>
+      <FormItem style={{ marginBottom: "0" }} name={["blog", "body"]}>
         <Textarea
           onChange={onChangeBodyTextarea}
           text={bodyText}
