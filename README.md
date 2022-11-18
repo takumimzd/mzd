@@ -1,4 +1,5 @@
 # Portfolio
+プロフィールや過去に投稿したブログ等をまとめています
 
 ## Technology Stack
 
