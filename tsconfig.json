@@ -20,6 +20,7 @@
     "paths": {
       "@/assets/*": ["src/assets/*"],
       "@/public/*": ["public/*"],
+      "@/libs/*": ["src/libs/*"],
       "@/components/*": ["src/components/*"],
       "@/constants/*": ["src/constants/*"],
       "@/pages/*": ["src/pages/*"],
