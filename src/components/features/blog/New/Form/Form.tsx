@@ -22,7 +22,7 @@ export const Form = ({
   isPc,
 }: Props) => {
   return (
-    <CommonForm style={{ width: isPc ? "75%" : "100%" }}>
+    <CommonForm style={{ width: isPc ? "75%" : "90%" }}>
       <FormItem name={["blog", "title"]}>
         <Input
           style={{

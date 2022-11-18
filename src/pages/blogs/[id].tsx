@@ -57,7 +57,7 @@ const Blog = () => {
             margin: `${MARGIN.L} 0 ${MARGIN.L} 0`,
             backgroundColor: BLOG_BACKGROUND_COLOR,
             boxShadow: BOX_SHADOW.MAIN,
-            width: isPc ? "75%" : "100%",
+            width: isPc ? "75%" : "90%",
             wordBreak: "break-all",
             padding: `${PADDING.M}`,
           }}
