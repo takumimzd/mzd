@@ -13,6 +13,7 @@ import { useCreateBlog } from "@/components/features/blog/hooks/useCreateBlog";
 
 import { useSession } from "@/hooks/useSession";
 import { useIsPcWindow } from "@/hooks/useIsPcWindow";
+import { Button } from "antd";
 
 const New = () => {
   const { isSignedIn } = useSession();
@@ -50,6 +51,14 @@ const New = () => {
             isPc={isPc}
           />
         )}
+      </Center>
+      <Center>
+        <div style={{ display: "flex", marginTop: MARGIN.L }}>
+          <Button style={{ marginRight: MARGIN.S }}>Saved</Button>
+          <Button style={{ marginLeft: MARGIN.S }} type="primary">
+            Publish
+          </Button>
+        </div>
       </Center>
     </>
   );

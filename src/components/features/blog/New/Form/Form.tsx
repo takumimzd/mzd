@@ -22,7 +22,7 @@ export const Form = ({
   isPc,
 }: Props) => {
   return (
-    <CommonForm style={{ width: isPc ? "75%" : "100%" }}>
+    <CommonForm style={{ width: isPc ? "75%" : "90%" }}>
       <FormItem name={["blog", "title"]}>
         <Input
           style={{
@@ -33,17 +33,19 @@ export const Form = ({
           }}
           text={title}
           onChange={onChangeTitleInput}
+          placeholder="Title"
         />
       </FormItem>
-      <FormItem name={["blog", "body"]}>
+      <FormItem style={{ marginBottom: "0" }} name={["blog", "body"]}>
         <Textarea
           onChange={onChangeBodyTextarea}
           text={bodyText}
+          placeholder={`Write Contents\nMarkdown is available`}
           style={{
             minHeight: isPc ? "500px" : "300px",
             backgroundColor: BLOG_BACKGROUND_COLOR,
             boxShadow: BOX_SHADOW.MAIN,
-            padding: `${PADDING.M}`,
+            padding: `${PADDING.S}`,
             border: "none",
           }}
         />
