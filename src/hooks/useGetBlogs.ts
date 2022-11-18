@@ -1,20 +1,25 @@
-import { supabase } from "@/libs/supabase";
-import { useEffect } from "react";
+import { ErrorType } from "@/types/api/common";
+import { BlogType } from "@/types/supabase/table";
+import { useEffect, useState } from "react";
+import { getIndex } from "src/apis/common/getIndex";
 
 export const useGetBlogs = () => {
+  const [blogs, setBlogs] = useState<BlogType[]>([]);
+  const [error, setError] = useState<ErrorType | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
   const getBlogs = async () => {
-    try {
-      const { data, error } = await supabase
-        .from("blogs")
-        .select("*")
-        .order("created_at", { ascending: false });
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
+    const { data, error, isLoading } = await getIndex<BlogType>({
+      table: "blogs",
+    });
+    setIsLoading(isLoading);
+    setBlogs(data);
+    setError(error);
   };
 
   useEffect(() => {
     getBlogs();
   }, []);
+
+  return { blogs, isLoading, error };
 };

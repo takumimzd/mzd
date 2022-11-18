@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { MARGIN, PADDING } from "@/constants/style";
-import { TechBlogItems, OtherBlogItems } from "@/assets/blog/blogItems";
+import { TechBlogItems } from "@/assets/blog/blogItems";
 
 import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
 import { List, Item, ItemMeta } from "@/components/common/List";
+import { OtherBlogList } from "./OtherBlogList/OtherBlogList";
 
 export const BlogList = () => {
   return (
@@ -27,22 +27,7 @@ export const BlogList = () => {
           )}
         />
       </div>
-      <Title level={3}>Other</Title>
-      <List
-        layout="horizontal"
-        dataSource={OtherBlogItems}
-        renderItem={(item) => (
-          <Item style={{ display: "block", padding: PADDING.S }}>
-            <Link href={`blogs/${item.link}`}>
-              <ItemMeta
-                avatar={<Avatar src={item.icon} />}
-                title={item.title}
-                description={item.date}
-              />
-            </Link>
-          </Item>
-        )}
-      />
+      <OtherBlogList />
     </>
   );
 };
