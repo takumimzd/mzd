@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Tooltip as AntdTooltip } from "antd";
-import { TooltipPlacement } from "antd/lib/tooltip";
+import { TooltipPlacement } from "antd/es/tooltip";
 
 interface Props {
   children: ReactNode;

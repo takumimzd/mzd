@@ -1,6 +1,6 @@
-import { List as AntdList } from "antd";
-import { ListItemLayout } from "antd/lib/list";
 import { ReactNode } from "react";
+import { List as AntdList } from "antd";
+import { ListItemLayout } from "antd/es/list";
 
 interface Props {
   renderItem: (item: any, index: number) => ReactNode;
