@@ -24,7 +24,7 @@ export const useCreateBlog = () => {
       title,
       body: bodyText,
     };
-    const { data, error } = await post<BlogType, BlogParamsType>({
+    const { data, error } = await post<BlogType>({
       table: "blogs",
       params,
     });

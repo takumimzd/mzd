@@ -4,12 +4,12 @@ import camelcaseKeys from "camelcase-keys";
 import { TableType } from "@/types/supabase/table";
 import { ErrorType } from "@/types/api/common";
 
-interface Props<U> {
+interface Props<T> {
   table: TableType;
-  params: U;
+  params: Partial<T>;
 }
 
-export const post = async <T, U>({ table, params }: Props<U>) => {
+export const post = async <T>({ table, params }: Props<T>) => {
   const { data, error: supabaseError } = await supabase
     .from<T>(table)
     .insert(params)
