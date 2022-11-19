@@ -1,19 +1,23 @@
-import camelcaseKeys from "camelcase-keys";
 import { supabase } from "@/libs/supabase";
+import camelcaseKeys from "camelcase-keys";
 
 import { TableType } from "@/types/supabase/table";
 import { ErrorType } from "@/types/api/common";
 
-interface Props {
+interface Props<T> {
   table: TableType;
+  column: keyof T;
+  value: T[keyof T];
 }
 
-export const getIndex = async <T>({ table }: Props) => {
+export const getById = async <T>({ table, column, value }: Props<T>) => {
   const { data, error: supabaseError } = await supabase
     .from<T>(table)
-    .select("*");
+    .select("*")
+    .eq(column, value)
+    .single();
 
-  const camelcaseData = camelcaseKeys(!!data ? data : []);
+  const camelcaseData = !!data ? camelcaseKeys(data) : null;
 
   const error: ErrorType | null = supabaseError
     ? {

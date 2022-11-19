@@ -1,16 +1,16 @@
 import Link from "next/link";
+import profileMainImage from "@/public/profile.webp";
 import { PADDING } from "@/constants/style";
 
 import { Item, ItemMeta, List } from "@/components/common/List";
 import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
-import { useGetBlogs } from "@/hooks/useGetBlogs";
+
+import { useGetBlogs } from "@/components/features/blog/hooks/useGetBlogs";
 
 export const OtherBlogList = () => {
   const { blogs, isLoading, error } = useGetBlogs();
-
-  if (isLoading) return null;
-  if (error) return null;
+  if (error || isLoading) return null;
 
   return (
     <div>
@@ -20,9 +20,11 @@ export const OtherBlogList = () => {
         dataSource={blogs}
         renderItem={(item) => (
           <Item style={{ display: "block", padding: PADDING.S }}>
-            <Link href={`blogs/${item.link}`}>
+            <Link href={`blogs/${item.id}`}>
               <ItemMeta
-                avatar={<Avatar src={item.icon} />}
+                avatar={
+                  <Avatar src={item.icon ? item.icon : profileMainImage.src} />
+                }
                 title={item.title}
                 description={item.date}
               />
