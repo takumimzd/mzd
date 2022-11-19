@@ -7,6 +7,7 @@ const COLORS = {
 
 export const HOVER_COLOR = COLORS.GRAY[100];
 export const BLOG_BACKGROUND_COLOR = COLORS.SNOW;
+export const BOLD_BACKGROUND_COLOR = COLORS.SNOW;
 
 export const MARGIN = {
   XS: "4px",

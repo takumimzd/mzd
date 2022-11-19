@@ -13,3 +13,11 @@
   background-color: #dcdcdc;
   transition: background-color 900ms;
 }
+
+.ant-collapse-expand-icon {
+  color: #1890ff;
+}
+
+.ant-collapse-header-text {
+  color: #1890ff;
+}
