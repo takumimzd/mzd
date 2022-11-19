@@ -18,8 +18,13 @@ import { Button } from "antd";
 const New = () => {
   const { isSignedIn } = useSession();
 
-  const { bodyText, onChangeBodyTextarea, title, onChangeTitleInput } =
-    useCreateBlog();
+  const {
+    bodyText,
+    onChangeBodyTextarea,
+    title,
+    onChangeTitleInput,
+    createBlog,
+  } = useCreateBlog();
   const [isPreview, setIsPreview] = useState(false);
   const { isPc } = useIsPcWindow();
 
@@ -55,7 +60,11 @@ const New = () => {
       <Center>
         <div style={{ display: "flex", marginTop: MARGIN.L }}>
           <Button style={{ marginRight: MARGIN.S }}>Saved</Button>
-          <Button style={{ marginLeft: MARGIN.S }} type="primary">
+          <Button
+            onClick={createBlog}
+            style={{ marginLeft: MARGIN.S }}
+            type="primary"
+          >
             Publish
           </Button>
         </div>
