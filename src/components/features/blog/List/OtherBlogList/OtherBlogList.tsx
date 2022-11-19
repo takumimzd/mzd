@@ -8,7 +8,11 @@ import { Avatar } from "@/components/common/Avatar";
 
 import { useGetBlogs } from "@/components/features/blog/hooks/useGetBlogs";
 
-export const OtherBlogList = () => {
+interface Props {
+  enableEdit: boolean;
+}
+
+export const OtherBlogList = ({ enableEdit }: Props) => {
   const { blogs, isLoading, error } = useGetBlogs();
   if (error || isLoading) return null;
 
@@ -19,14 +23,28 @@ export const OtherBlogList = () => {
         layout="horizontal"
         dataSource={blogs}
         renderItem={(item) => (
-          <Item style={{ display: "block", padding: PADDING.S }}>
+          <Item
+            actions={
+              enableEdit
+                ? [
+                    <Link
+                      key={`blog-edit-action-${item.id}`}
+                      href={`admin/blogs/edit/${item.id}`}
+                    >
+                      edit
+                    </Link>,
+                  ]
+                : []
+            }
+            style={{ display: "block", padding: PADDING.S }}
+          >
             <Link href={`blogs/${item.id}`}>
               <ItemMeta
                 avatar={
                   <Avatar src={item.icon ? item.icon : profileMainImage.src} />
                 }
                 title={item.title}
-                description={item.date}
+                description={item.createdAt}
               />
             </Link>
           </Item>

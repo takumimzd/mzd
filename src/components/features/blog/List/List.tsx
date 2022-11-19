@@ -7,7 +7,11 @@ import { List, Item, ItemMeta } from "@/components/common/List";
 
 import { OtherBlogList } from "./OtherBlogList/OtherBlogList";
 
-export const BlogList = () => {
+interface Props {
+  enableEdit?: boolean;
+}
+
+export const BlogList = ({ enableEdit = false }: Props) => {
   return (
     <>
       <div style={{ marginBottom: MARGIN.M }}>
@@ -28,7 +32,7 @@ export const BlogList = () => {
           )}
         />
       </div>
-      <OtherBlogList />
+      <OtherBlogList enableEdit={enableEdit} />
     </>
   );
 };

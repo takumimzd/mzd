@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BlogList } from "../blog/List/List";
 
 export const Admin = () => {
   return (
@@ -6,6 +7,7 @@ export const Admin = () => {
       <Link href="/admin/blogs/new">
         <p>New</p>
       </Link>
+      <BlogList enableEdit />
     </div>
   );
 };
