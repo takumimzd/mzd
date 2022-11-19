@@ -18,9 +18,12 @@ export const CareerItems = [
         </Paragraph>
         <Title level={5}>開発した主な機能</Title>
         <ul style={{ marginBottom: MARGIN.M }}>
-          <li>タイムラインへのメール投稿</li>
-          <li>投稿ピックアップ</li>
-          <li>依頼機能</li>
+          <li>
+            タイムラインへのHTMLメール投稿
+            (特定のHTMLメールを受信した時に、それを投稿の一部として表示する機能)
+          </li>
+          <li>投稿ピックアップ (Twitterの引用リツイートのような機能)</li>
+          <li>依頼機能 (投稿を通して依頼をする機能)</li>
           <li>チャットの返信/動画投稿/タスク管理</li>
           <li>カレンダー</li>
         </ul>

@@ -1,7 +1,8 @@
 import { CareerItems } from "@/assets/careerItems";
+
+import { Accordion } from "@/components/common/Accordion";
 import { Timeline, TimelineItem } from "@/components/common/Timeline";
 import { Paragraph, Title } from "@/components/common/Typography";
-import { Collapse } from "antd";
 
 export const Profile = () => {
   return (
@@ -19,11 +20,15 @@ export const Profile = () => {
                   {item.text}
                 </a>
                 {item.Details && (
-                  <Collapse ghost>
-                    <Collapse.Panel header="more" key="career-item-details">
-                      {item.Details}
-                    </Collapse.Panel>
-                  </Collapse>
+                  <Accordion
+                    items={[
+                      {
+                        header: "more",
+                        key: "career-item-details",
+                        children: item.Details,
+                      },
+                    ]}
+                  />
                 )}
               </>
             </TimelineItem>
