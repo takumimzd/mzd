@@ -1,15 +1,19 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import { post } from "@/apis/common/post";
-
-import { BlogParamsType } from "@/types/blog";
 import { BlogType } from "@/types/supabase/table";
+import { BlogParamsType } from "@/types/blog";
 
-export const useCreateBlog = () => {
+import { patch } from "@/apis/common/patch";
+
+interface Props {
+  blog: BlogType;
+}
+export const useUpdateBlog = ({ blog }: Props) => {
   const router = useRouter();
-  const [bodyText, setBodyText] = useState("");
-  const [title, setTitle] = useState("");
+  const { id } = router.query;
+  const [title, setTitle] = useState(blog.title);
+  const [bodyText, setBodyText] = useState(blog.body);
 
   const onChangeBodyTextarea = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setBodyText(event.target.value);
@@ -19,14 +23,16 @@ export const useCreateBlog = () => {
     setTitle(event.target.value);
   };
 
-  const createBlog = async () => {
+  const updateBlog = async () => {
     const params: BlogParamsType = {
       title,
       body: bodyText,
     };
-    const { data, error } = await post<BlogType>({
+    const { data, error } = await patch<BlogType>({
       table: "blogs",
       params,
+      column: "id",
+      value: Number(id),
     });
     if (!!data && !error) {
       router.push(`/blogs/${data.id}`);
@@ -38,6 +44,6 @@ export const useCreateBlog = () => {
     onChangeBodyTextarea,
     title,
     onChangeTitleInput,
-    createBlog,
+    updateBlog,
   };
 };
