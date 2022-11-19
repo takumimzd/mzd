@@ -5,6 +5,7 @@ import { PADDING } from "@/constants/style";
 import { Item, ItemMeta, List } from "@/components/common/List";
 import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
+import { Skeleton } from "@/components/common/Skeleton";
 
 import { useGetBlogs } from "@/features/blog/hooks/useGetBlogs";
 
@@ -16,7 +17,9 @@ interface Props {
 
 export const OtherBlogList = ({ enableEdit }: Props) => {
   const { blogs, isLoading, error } = useGetBlogs();
-  if (error || isLoading) return null;
+
+  if (isLoading) return <Skeleton avatar paragraph={{ rows: 1 }} />;
+  if (error) return null;
 
   return (
     <div>

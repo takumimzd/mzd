@@ -12,7 +12,7 @@ export const Profile = () => {
         <Timeline>
           {CareerItems.map((item) => (
             <TimelineItem
-              style={{ paddingBottom: item.Details ? "0" : "" }}
+              style={{ paddingBottom: item.Details && "0" }}
               key={item.text}
             >
               <>
