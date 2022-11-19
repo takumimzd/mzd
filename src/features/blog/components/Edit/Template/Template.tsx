@@ -8,8 +8,8 @@ import { CaretRightOutlined } from "@/components/common/Icon";
 import { Switch } from "@/components/common/Switch";
 import { Button } from "@/components/common/Button";
 
-import { Form } from "@/components/features/blog/New/Form/Form";
-import { Preview } from "@/components/features/blog/Preview";
+import { Form } from "@/features/blog/components/New/Form/Form";
+import { Preview } from "@/features/blog/components/Preview";
 
 interface Props {
   isPc: boolean;

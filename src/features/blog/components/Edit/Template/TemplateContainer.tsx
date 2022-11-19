@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { BlogType } from "@/types/supabase/table";
 
-import { useUpdateBlog } from "@/components/features/blog/hooks/useUpdateBlog";
+import { useUpdateBlog } from "@/features/blog/hooks/useUpdateBlog";
 
 import { Template } from "./Template";
 

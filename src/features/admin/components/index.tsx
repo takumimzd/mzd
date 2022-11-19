@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BlogList } from "../blog/List/List";
+import { BlogList } from "../../blog/components/List/List";
 
 export const Admin = () => {
   return (
