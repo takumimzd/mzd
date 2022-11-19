@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent } from "react";
 
 import { MARGIN } from "@/constants/style";
 
@@ -6,34 +6,32 @@ import { Center } from "@/components/common/Layout";
 import { Tooltip } from "@/components/common/Tooltip";
 import { CaretRightOutlined } from "@/components/common/Icon";
 import { Switch } from "@/components/common/Switch";
+import { Button } from "@/components/common/Button";
 
 import { Form } from "@/components/features/blog/New/Form/Form";
 import { Preview } from "@/components/features/blog/Preview";
-import { useCreateBlog } from "@/components/features/blog/hooks/useCreateBlog";
 
-import { useSession } from "@/hooks/useSession";
-import { useIsPcWindow } from "@/hooks/useIsPcWindow";
-import { Button } from "antd";
+interface Props {
+  isPc: boolean;
+  bodyText: string;
+  onChangeBodyTextarea: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+  title: string;
+  onChangeTitleInput: (event: ChangeEvent<HTMLInputElement>) => void;
+  updateBlog: () => void;
+  onChangeViewSwitch: () => void;
+  isPreview: boolean;
+}
 
-const New = () => {
-  const { isSignedIn } = useSession();
-
-  const {
-    bodyText,
-    onChangeBodyTextarea,
-    title,
-    onChangeTitleInput,
-    createBlog,
-  } = useCreateBlog();
-  const [isPreview, setIsPreview] = useState(false);
-  const { isPc } = useIsPcWindow();
-
-  const onChangeViewSwitch = () => {
-    setIsPreview((prev) => !prev);
-  };
-
-  if (isPc === undefined || !isSignedIn) return null;
-
+export const Template = ({
+  isPc,
+  bodyText,
+  onChangeBodyTextarea,
+  title,
+  onChangeTitleInput,
+  updateBlog,
+  onChangeViewSwitch,
+  isPreview,
+}: Props) => {
   return (
     <>
       <Center style={{ margin: `${MARGIN.L} 0 0 0` }}>
@@ -59,18 +57,18 @@ const New = () => {
       </Center>
       <Center>
         <div style={{ display: "flex", marginTop: MARGIN.L }}>
-          <Button style={{ marginRight: MARGIN.S }}>Saved</Button>
+          <Button style={{ marginRight: MARGIN.S }} onClick={() => {}}>
+            Saved
+          </Button>
           <Button
-            onClick={createBlog}
+            onClick={updateBlog}
             style={{ marginLeft: MARGIN.S }}
             type="primary"
           >
-            Publish
+            Update
           </Button>
         </div>
       </Center>
     </>
   );
 };
-
-export default New;

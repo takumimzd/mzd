@@ -1,4 +1,5 @@
 import Link from "next/link";
+import profileMainImage from "@/public/profile.webp";
 
 import {
   BLOG_BACKGROUND_COLOR,
@@ -19,7 +20,8 @@ import { useGetBlog } from "@/components/features/blog/hooks/useGetBlog";
 import { useIsPcWindow } from "@/hooks/useIsPcWindow";
 
 const Blog = () => {
-  const { blog, isLoading } = useGetBlog();
+  const { blog, isLoading, error } = useGetBlog();
+
   const { isPc } = useIsPcWindow();
 
   const breadcrumbItems = [
@@ -31,14 +33,14 @@ const Blog = () => {
     </div>,
   ];
 
-  if (isLoading || !blog || isPc === undefined) return null;
+  if (isLoading || !blog || isPc === undefined || error) return null;
 
   return (
     <div style={{ margin: MARGIN.L }}>
       <Breadcrumb items={breadcrumbItems} />
       <Center>
         <CircleImage
-          src={blog.icon}
+          src={!!blog.icon ? blog.icon : `${profileMainImage.src}`}
           size={{
             width: 150,
             height: 150,
