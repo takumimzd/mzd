@@ -8,6 +8,8 @@ import { Avatar } from "@/components/common/Avatar";
 
 import { useGetBlogs } from "@/components/features/blog/hooks/useGetBlogs";
 
+import { formatDate } from "@/utils/date/format";
+
 interface Props {
   enableEdit: boolean;
 }
@@ -44,7 +46,7 @@ export const OtherBlogList = ({ enableEdit }: Props) => {
                   <Avatar src={item.icon ? item.icon : profileMainImage.src} />
                 }
                 title={item.title}
-                description={item.createdAt}
+                description={formatDate({ date: new Date(item.createdAt) })}
               />
             </Link>
           </Item>
