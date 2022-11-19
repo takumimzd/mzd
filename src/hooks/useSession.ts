@@ -11,6 +11,6 @@ export const useSession = () => {
     onSession();
   }, []);
   return {
-    isSignedIn: isSignedIn,
+    isSignedIn,
   };
 };

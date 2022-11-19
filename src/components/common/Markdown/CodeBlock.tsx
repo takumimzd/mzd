@@ -4,7 +4,7 @@ import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export const CodeBlock: CodeComponent = ({ inline, className, children }) => {
   if (inline) {
-    return <code className={className}>{children}</code>;
+    return <code className="markdown-code">{children}</code>;
   }
   const match = /language-(\w+)/.exec(className || "");
   const lang = match && match[1] ? match[1] : "";
