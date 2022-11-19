@@ -1,5 +1,5 @@
-import { TemplateContainer } from "@/components/features/blog/Edit/Template/TemplateContainer";
-import { useGetBlog } from "@/components/features/blog/hooks/useGetBlog";
+import { TemplateContainer } from "@/features/blog/components/Edit/Template/TemplateContainer";
+import { useGetBlog } from "@/features/blog/hooks/useGetBlog";
 import { useIsPcWindow } from "@/hooks/useIsPcWindow";
 import { useSession } from "@/hooks/useSession";
 

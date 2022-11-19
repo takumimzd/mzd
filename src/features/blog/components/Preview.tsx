@@ -17,7 +17,7 @@ export const Preview = ({ isPc, bodyText, title }: Props) => {
       <Title level={3}>{previewTitle}</Title>
       <div
         style={{
-          width: isPc ? "75%" : "90%",
+          width: isPc ? "75%" : "95%",
           minHeight: isPc ? "500px" : "300px",
           backgroundColor: BLOG_BACKGROUND_COLOR,
           boxShadow: BOX_SHADOW.MAIN,

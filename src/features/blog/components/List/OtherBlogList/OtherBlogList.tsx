@@ -6,7 +6,7 @@ import { Item, ItemMeta, List } from "@/components/common/List";
 import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
 
-import { useGetBlogs } from "@/components/features/blog/hooks/useGetBlogs";
+import { useGetBlogs } from "@/features/blog/hooks/useGetBlogs";
 
 import { formatDate } from "@/utils/date/format";
 

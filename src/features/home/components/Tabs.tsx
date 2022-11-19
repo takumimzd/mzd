@@ -1,8 +1,8 @@
 import { Tabs as CommonTabs } from "@/components/common/Tab";
 
-import { Profile } from "@/components/features/profile";
-import { BlogList } from "@/components/features/blog/List/List";
-import { Admin } from "@/components/features/admin";
+import { Profile } from "@/features/profile/components";
+import { BlogList } from "@/features/blog/components/List/List";
+import { Admin } from "@/features/admin/components";
 
 import { useSession } from "@/hooks/useSession";
 

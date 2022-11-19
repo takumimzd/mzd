@@ -15,7 +15,7 @@ import { CircleImage } from "@/components/common/Image";
 import { LeftOutlined } from "@/components/common/Icon";
 import { Title } from "@/components/common/Typography";
 
-import { useGetBlog } from "@/components/features/blog/hooks/useGetBlog";
+import { useGetBlog } from "@/features/blog/hooks/useGetBlog";
 
 import { useIsPcWindow } from "@/hooks/useIsPcWindow";
 
@@ -59,7 +59,7 @@ const Blog = () => {
             margin: `${MARGIN.L} 0 ${MARGIN.L} 0`,
             backgroundColor: BLOG_BACKGROUND_COLOR,
             boxShadow: BOX_SHADOW.MAIN,
-            width: isPc ? "75%" : "90%",
+            width: isPc ? "75%" : "95%",
             wordBreak: "break-all",
             padding: `${PADDING.M}`,
           }}

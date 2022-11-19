@@ -3,8 +3,8 @@ import Head from "next/head";
 
 import { MARGIN } from "@/constants/style";
 
-import { BasicInfomation } from "@/components/features/basicInfomation";
-import { Tabs } from "@/components/features/home/Tabs";
+import { BasicInfomation } from "@/features/basicInfomation/components";
+import { Tabs } from "@/features/home/components/Tabs";
 
 const Home = () => {
   return (
