@@ -1,10 +1,11 @@
 import { CodeComponent } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { markdownStyle } from "./markdown.css";
 
 export const CodeBlock: CodeComponent = ({ inline, className, children }) => {
   if (inline) {
-    return <code className="markdown-code">{children}</code>;
+    return <code className={markdownStyle.code}>{children}</code>;
   }
   const match = /language-(\w+)/.exec(className || "");
   const lang = match && match[1] ? match[1] : "";
