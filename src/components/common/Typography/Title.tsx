@@ -1,14 +1,14 @@
+import { ReactNode } from "react";
 import { Typography } from "antd";
-import { CSSProperties, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  style?: CSSProperties;
+  className?: string;
   level: 1 | 2 | 3 | 4 | 5;
 }
-export const Title = ({ children, style, level }: Props) => {
+export const Title = ({ children, level, className }: Props) => {
   return (
-    <Typography.Title style={style} level={level}>
+    <Typography.Title className={className} level={level}>
       {children}
     </Typography.Title>
   );

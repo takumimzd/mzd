@@ -1,20 +1,9 @@
-import React, { CSSProperties } from "react";
+import React from "react";
+import { layoutStyle } from "./layout.css";
 
 interface Props {
   children: React.ReactNode;
-  style: CSSProperties;
 }
-export const Flexbox = ({ children, style }: Props) => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        ...style,
-      }}
-    >
-      {children}
-    </div>
-  );
+export const Flexbox = ({ children }: Props) => {
+  return <div className={layoutStyle.flexbox}>{children}</div>;
 };

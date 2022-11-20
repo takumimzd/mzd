@@ -1,17 +1,17 @@
-import { ChangeEvent, CSSProperties } from "react";
+import { ChangeEvent } from "react";
 import { Input as AntdInput } from "antd";
+import { inputStyle } from "./input.css";
 
 interface Props {
-  style: CSSProperties;
   text: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
 }
 
-export const Input = ({ style, text, onChange, placeholder }: Props) => {
+export const Input = ({ text, onChange, placeholder }: Props) => {
   return (
     <AntdInput
-      style={style}
+      className={inputStyle.input}
       defaultValue={text}
       onChange={onChange}
       placeholder={placeholder}

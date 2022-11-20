@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 
-import { MARGIN } from "@/constants/style";
+import { editStyle } from "../../../styles/blog.css";
 
 import { Center } from "@/components/common/Layout";
 import { Tooltip } from "@/components/common/Tooltip";
@@ -34,7 +34,7 @@ export const Template = ({
 }: Props) => {
   return (
     <>
-      <Center style={{ margin: `${MARGIN.L} 0 0 0` }}>
+      <Center className={editStyle.tooltipContainer}>
         <Tooltip placement="right" title="Preview">
           <Switch
             checkedChildren={<CaretRightOutlined />}
@@ -42,7 +42,7 @@ export const Template = ({
           />
         </Tooltip>
       </Center>
-      <Center style={{ margin: `${MARGIN.M} 0 0 0` }}>
+      <Center className={editStyle.formAndPreviewContainer}>
         {isPreview ? (
           <Preview title={title} bodyText={bodyText} isPc={isPc} />
         ) : (
@@ -56,13 +56,13 @@ export const Template = ({
         )}
       </Center>
       <Center>
-        <div style={{ display: "flex", marginTop: MARGIN.L }}>
-          <Button style={{ marginRight: MARGIN.S }} onClick={() => {}}>
+        <div className={editStyle.buttonContainer}>
+          <Button className={editStyle.saveButtonContainer} onClick={() => {}}>
             Saved
           </Button>
           <Button
             onClick={updateBlog}
-            style={{ marginLeft: MARGIN.S }}
+            className={editStyle.updateButtonContainer}
             type="primary"
           >
             Update

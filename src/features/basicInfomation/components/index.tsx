@@ -1,7 +1,7 @@
 import profileMainImage from "@/public/profile.webp";
 import { MyAccountItems } from "@/assets/myAccountItems";
 
-import { MARGIN } from "@/constants/style";
+import { style } from "../styles/basicInformation.css";
 
 import { Center } from "@/components/common/Layout";
 import { CircleImage } from "@/components/common/Image";
@@ -22,15 +22,12 @@ export const BasicInfomation = () => {
             alt="profile main image"
           />
           <Center>
-            <Title
-              style={{ marginRight: MARGIN.XS, marginTop: MARGIN.S }}
-              level={4}
-            >
+            <Title className={style.myName} level={4}>
               神尾 拓未
             </Title>
-            <div style={{ display: "flex" }}>
+            <div className={style.myAccountContents}>
               {MyAccountItems.map((item) => (
-                <div key={item.service} style={{ marginBottom: `${MARGIN.M}` }}>
+                <div key={item.service} className={style.myAccountItem}>
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <Avatar src={item.icon} />
                   </a>
@@ -42,7 +39,7 @@ export const BasicInfomation = () => {
       </Center>
       <Center>
         <div>
-          <Paragraph style={{ textAlign: "center", marginBottom: "0" }}>
+          <Paragraph className={style.description}>
             ソフトウェアエンジニア / スクラムマスター / 27歳 /
             横浜育ち名古屋住み / 猫好き / テニス好き
           </Paragraph>

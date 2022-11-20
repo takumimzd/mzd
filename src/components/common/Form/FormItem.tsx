@@ -1,15 +1,15 @@
 import { Form } from "antd";
-import { CSSProperties, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  style?: CSSProperties;
+  className?: string;
   name: string[];
 }
 
-export const FormItem = ({ children, style, name }: Props) => {
+export const FormItem = ({ children, className, name }: Props) => {
   return (
-    <Form.Item style={style} name={name}>
+    <Form.Item className={className} name={name}>
       {children}
     </Form.Item>
   );

@@ -1,12 +1,16 @@
 import { List as AntdList } from "antd";
-import { CSSProperties, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  style: CSSProperties;
+  className?: string;
   actions?: ReactNode[];
 }
 
-export const Item = ({ children, actions }: Props) => {
-  return <AntdList.Item actions={actions}>{children}</AntdList.Item>;
+export const Item = ({ children, actions, className }: Props) => {
+  return (
+    <AntdList.Item actions={actions} className={className}>
+      {children}
+    </AntdList.Item>
+  );
 };

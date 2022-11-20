@@ -1,17 +1,17 @@
-import { ChangeEvent, CSSProperties } from "react";
+import { ChangeEvent } from "react";
 import { Input as AntdInput } from "antd";
+import { textareaStyle } from "./textarea.css";
 
 interface Props {
-  style: CSSProperties;
   text: string;
   onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   placeholder?: string;
 }
 
-export const Textarea = ({ style, text, onChange, placeholder }: Props) => {
+export const Textarea = ({ text, onChange, placeholder }: Props) => {
   return (
     <AntdInput.TextArea
-      style={style}
+      className={textareaStyle.textarea}
       autoSize
       defaultValue={text}
       onChange={onChange}

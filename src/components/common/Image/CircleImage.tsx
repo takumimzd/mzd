@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Image } from "antd";
+import { imageStyle } from "./image.css";
 
 interface Props {
   src: string;
@@ -20,9 +21,9 @@ export const CircleImage = ({ src, alt, size }: Props) => {
         src={src}
         alt={alt}
         onClick={() => setVisible(true)}
-        style={{ borderRadius: "50%" }}
+        className={imageStyle.circleImage}
       />
-      <div style={{ display: "none", borderRadius: "50%" }}>
+      <div className={imageStyle.circleImagePreview}>
         <Image.PreviewGroup
           preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
         >
