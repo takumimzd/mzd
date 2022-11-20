@@ -5,6 +5,7 @@ export const assetsStyle = {
   detailsWrapper: style({
     backgroundColor: BOLD_BACKGROUND_COLOR,
     padding: PADDING.M,
+    maxWidth: "650px",
   }),
   textIndent: style({
     textIndent: "1rem",
