@@ -1,11 +1,11 @@
 import { Form as AntdForm } from "antd";
-import { CSSProperties, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  style?: CSSProperties;
+  className?: string;
 }
 
-export const Form = ({ children, style }: Props) => {
-  return <AntdForm style={style}>{children}</AntdForm>;
+export const Form = ({ children, className }: Props) => {
+  return <AntdForm className={className}>{children}</AntdForm>;
 };

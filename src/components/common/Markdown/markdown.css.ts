@@ -1,7 +1,7 @@
-import { style } from "@vanilla-extract/css";
+import { style as vanilla } from "@vanilla-extract/css";
 
-export const markdownStyle = {
-  code: style({
+export const style = {
+  code: vanilla({
     margin: "0 0.2em",
     padding: "0.2em 0.4em 0.1em",
     fontSize: "85%",

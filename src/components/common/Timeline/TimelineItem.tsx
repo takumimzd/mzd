@@ -1,11 +1,13 @@
 import { Timeline as AntdTimeline } from "antd";
-import { CSSProperties, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  style?: CSSProperties;
+  className?: string;
 }
 
-export const TimelineItem = ({ children, style }: Props) => {
-  return <AntdTimeline.Item style={style}>{children}</AntdTimeline.Item>;
+export const TimelineItem = ({ children, className }: Props) => {
+  return (
+    <AntdTimeline.Item className={className}>{children}</AntdTimeline.Item>
+  );
 };

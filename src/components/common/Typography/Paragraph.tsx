@@ -1,11 +1,15 @@
+import { ReactNode } from "react";
 import { Typography } from "antd";
-import { CSSProperties, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  style?: CSSProperties;
+  className?: string;
 }
 
-export const Paragraph = ({ children, style }: Props) => {
-  return <Typography.Paragraph style={style}>{children}</Typography.Paragraph>;
+export const Paragraph = ({ children, className }: Props) => {
+  return (
+    <Typography.Paragraph className={className}>
+      {children}
+    </Typography.Paragraph>
+  );
 };

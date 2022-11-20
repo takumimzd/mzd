@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { MARGIN } from "@/constants/style";
+import { adminStyle } from "../../../features/admin/styles/admin.css";
 
 import { Center } from "@/components/common/Layout";
 import { Tooltip } from "@/components/common/Tooltip";
@@ -36,7 +36,7 @@ const New = () => {
 
   return (
     <>
-      <Center style={{ margin: `${MARGIN.L} 0 0 0` }}>
+      <Center className={adminStyle.tooltipContainer}>
         <Tooltip placement="right" title="Preview">
           <Switch
             checkedChildren={<CaretRightOutlined />}
@@ -44,7 +44,7 @@ const New = () => {
           />
         </Tooltip>
       </Center>
-      <Center style={{ margin: `${MARGIN.M} 0 0 0` }}>
+      <Center className={adminStyle.formAndPreviewContainer}>
         {isPreview ? (
           <Preview title={title} bodyText={bodyText} isPc={isPc} />
         ) : (
@@ -58,11 +58,11 @@ const New = () => {
         )}
       </Center>
       <Center>
-        <div style={{ display: "flex", marginTop: MARGIN.L }}>
-          <Button style={{ marginRight: MARGIN.S }}>Saved</Button>
+        <div className={adminStyle.buttonContainer}>
+          <Button className={adminStyle.saveButtonContainer}>Saved</Button>
           <Button
             onClick={createBlog}
-            style={{ marginLeft: MARGIN.S }}
+            className={adminStyle.updateButtonContainer}
             type="primary"
           >
             Publish

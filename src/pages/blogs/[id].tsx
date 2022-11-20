@@ -1,12 +1,6 @@
 import Link from "next/link";
 import profileMainImage from "@/public/profile.webp";
-
-import {
-  BLOG_BACKGROUND_COLOR,
-  BOX_SHADOW,
-  MARGIN,
-  PADDING,
-} from "@/constants/style";
+import { indexStyle } from "../../features/blog/styles/blog.css";
 
 import { MarkdownView } from "@/components/common/Markdown";
 import { Breadcrumb } from "@/components/common/Breadcrumb";
@@ -28,7 +22,7 @@ const Blog = () => {
     <div key="Home">
       <Link href="/">
         <LeftOutlined />
-        <span style={{ marginLeft: MARGIN.S }}>Home</span>
+        <span className={indexStyle.breadcrumbItemText}>Home</span>
       </Link>
     </div>,
   ];
@@ -36,7 +30,7 @@ const Blog = () => {
   if (isLoading || !blog || isPc === undefined || error) return null;
 
   return (
-    <div style={{ margin: MARGIN.L }}>
+    <div className={indexStyle.wrapper}>
       <Breadcrumb items={breadcrumbItems} />
       <Center>
         <CircleImage
@@ -49,21 +43,12 @@ const Blog = () => {
         />
       </Center>
       <Center>
-        <Title style={{ marginTop: MARGIN.M }} level={3}>
+        <Title className={indexStyle.blogTitle} level={3}>
           {blog.title}
         </Title>
       </Center>
       <Center>
-        <div
-          style={{
-            margin: `${MARGIN.L} 0 ${MARGIN.L} 0`,
-            backgroundColor: BLOG_BACKGROUND_COLOR,
-            boxShadow: BOX_SHADOW.MAIN,
-            width: isPc ? "75%" : "95%",
-            wordBreak: "break-all",
-            padding: `${PADDING.M}`,
-          }}
-        >
+        <div className={indexStyle.markdownViewContainer}>
           <MarkdownView>{blog.body}</MarkdownView>
         </div>
       </Center>

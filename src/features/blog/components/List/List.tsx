@@ -1,4 +1,5 @@
 import { MARGIN, PADDING } from "@/constants/style";
+import { listStyle } from "../../styles/blog.css";
 import { TechBlogItems } from "@/assets/blog/blogItems";
 
 import { Title } from "@/components/common/Typography";
@@ -14,13 +15,13 @@ interface Props {
 export const BlogList = ({ enableEdit = false }: Props) => {
   return (
     <>
-      <div style={{ marginBottom: MARGIN.M }}>
+      <div className={listStyle.techBlogListWrapper}>
         <Title level={3}>Tech</Title>
         <List
           layout="horizontal"
           dataSource={TechBlogItems}
           renderItem={(item) => (
-            <Item style={{ display: "block", padding: PADDING.S }}>
+            <Item className={listStyle.blogItem}>
               <a href={item.link} target="_blank" rel="noreferrer">
                 <ItemMeta
                   avatar={<Avatar src={item.icon} />}

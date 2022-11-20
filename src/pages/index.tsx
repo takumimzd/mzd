@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
-
-import { MARGIN } from "@/constants/style";
+import { homeStyle } from "../features/home/styles/home.css";
 
 import { BasicInfomation } from "@/features/basicInfomation/components";
 import { Tabs } from "@/features/home/components/Tabs";
@@ -14,9 +13,9 @@ const Home = () => {
         <meta name="description" content="mzd profire" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ margin: MARGIN.L }}>
+      <div className={homeStyle.wrapper}>
         <BasicInfomation />
-        <div style={{ marginTop: MARGIN.L }}>
+        <div className={homeStyle.tabWrapper}>
           <Tabs />
         </div>
       </div>

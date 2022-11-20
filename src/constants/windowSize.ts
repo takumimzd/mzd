@@ -1,1 +1,1 @@
-export const minPcWindowWidth = 800;
+export const minPcWindowWidth = 768;

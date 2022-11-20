@@ -1,4 +1,4 @@
-import { BLOG_BACKGROUND_COLOR, BOX_SHADOW, PADDING } from "@/constants/style";
+import { previewStyle } from "../styles/blog.css";
 
 import { Center } from "@/components/common/Layout";
 import { MarkdownView } from "@/components/common/Markdown";
@@ -10,21 +10,12 @@ interface Props {
   title: string;
 }
 
-export const Preview = ({ isPc, bodyText, title }: Props) => {
+export const Preview = ({ bodyText, title }: Props) => {
   const previewTitle = !!title ? title : "No Title";
   return (
     <Center>
       <Title level={3}>{previewTitle}</Title>
-      <div
-        style={{
-          width: isPc ? "75%" : "95%",
-          minHeight: isPc ? "500px" : "300px",
-          backgroundColor: BLOG_BACKGROUND_COLOR,
-          boxShadow: BOX_SHADOW.MAIN,
-          wordBreak: "break-all",
-          padding: `${PADDING.M}`,
-        }}
-      >
+      <div className={previewStyle.previewWrapper}>
         <MarkdownView>{bodyText}</MarkdownView>
       </div>
     </Center>

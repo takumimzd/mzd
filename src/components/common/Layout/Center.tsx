@@ -1,20 +1,10 @@
-import React, { CSSProperties } from "react";
+import React from "react";
+import { layoutStyle } from "./layout.css";
 
 interface Props {
   children: React.ReactNode;
-  style?: CSSProperties;
+  className?: string;
 }
-export const Center = ({ children, style }: Props) => {
-  return (
-    <div
-      style={{
-        ...style,
-        display: "grid",
-        placeItems: "center",
-        width: "100%",
-      }}
-    >
-      {children}
-    </div>
-  );
+export const Center = ({ children, className }: Props) => {
+  return <div className={`${className} ${layoutStyle.center}`}>{children}</div>;
 };

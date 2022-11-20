@@ -1,14 +1,12 @@
 import { Paragraph, Title } from "@/components/common/Typography";
-import { BOLD_BACKGROUND_COLOR, PADDING, MARGIN } from "@/constants/style";
+import { assetsStyle } from "./index.css";
 
 export const CareerItems = [
   {
     link: "https://stmn.co.jp/",
     text: "stmn inc (2021/01 - )",
     Details: (
-      <div
-        style={{ backgroundColor: BOLD_BACKGROUND_COLOR, padding: PADDING.M }}
-      >
+      <div className={assetsStyle.detailsWrapper}>
         <Title level={4}>開発</Title>
         <Paragraph>
           フロントエンド(React/Typescript)を用いてエンゲージメントプラットフォーム『TUNAG』を開発しています。
@@ -17,7 +15,7 @@ export const CareerItems = [
           また、RubyOnRailを用いた不具合改善やAPIの作成も行なっています。
         </Paragraph>
         <Title level={5}>開発した主な機能</Title>
-        <ul style={{ marginBottom: MARGIN.M }}>
+        <ul className={assetsStyle.ul}>
           <li>
             タイムラインへのHTMLメール投稿
             (特定のHTMLメールを受信した時に、それを投稿の一部として表示する機能)

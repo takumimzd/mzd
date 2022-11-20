@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
-
-import { BLOG_BACKGROUND_COLOR, BOX_SHADOW, PADDING } from "@/constants/style";
+import { newStyle } from "../../../styles/blog.css";
 
 import { Form as CommonForm, FormItem } from "@/components/common/Form";
 import { Input } from "@/components/common/Input";
@@ -22,32 +21,15 @@ export const Form = ({
   isPc,
 }: Props) => {
   return (
-    <CommonForm style={{ width: isPc ? "75%" : "95%" }}>
+    <CommonForm className={newStyle.form}>
       <FormItem name={["blog", "title"]}>
-        <Input
-          style={{
-            backgroundColor: BLOG_BACKGROUND_COLOR,
-            boxShadow: BOX_SHADOW.MAIN,
-            padding: `${PADDING.S}`,
-            border: "none",
-          }}
-          text={title}
-          onChange={onChangeTitleInput}
-          placeholder="Title"
-        />
+        <Input text={title} onChange={onChangeTitleInput} placeholder="Title" />
       </FormItem>
-      <FormItem style={{ marginBottom: "0" }} name={["blog", "body"]}>
+      <FormItem className={newStyle.formItem} name={["blog", "body"]}>
         <Textarea
           onChange={onChangeBodyTextarea}
           text={bodyText}
           placeholder={`Write Contents\nMarkdown is available`}
-          style={{
-            minHeight: isPc ? "500px" : "300px",
-            backgroundColor: BLOG_BACKGROUND_COLOR,
-            boxShadow: BOX_SHADOW.MAIN,
-            padding: `${PADDING.S}`,
-            border: "none",
-          }}
         />
       </FormItem>
     </CommonForm>

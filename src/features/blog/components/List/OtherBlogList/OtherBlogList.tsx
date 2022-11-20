@@ -1,6 +1,6 @@
 import Link from "next/link";
 import profileMainImage from "@/public/profile.webp";
-import { PADDING } from "@/constants/style";
+import { listStyle } from "../../../styles/blog.css";
 
 import { Item, ItemMeta, List } from "@/components/common/List";
 import { Title } from "@/components/common/Typography";
@@ -41,7 +41,7 @@ export const OtherBlogList = ({ enableEdit }: Props) => {
                   ]
                 : []
             }
-            style={{ display: "block", padding: PADDING.S }}
+            className={listStyle.blogItem}
           >
             <Link href={`blogs/${item.id}`}>
               <ItemMeta
