@@ -39,7 +39,7 @@ export const newStyle = {
   form: style({
     "@media": {
       "screen and (min-width: 768px)": {
-        width: "75%",
+        width: "700px",
       },
     },
     width: "100%",
@@ -53,11 +53,11 @@ export const previewStyle = {
   previewWrapper: style({
     "@media": {
       "screen and (min-width: 768px)": {
-        width: "75%",
+        width: "700px",
         minHeight: "500px",
       },
     },
-    width: "95%",
+    width: "100%",
     minHeight: "300px",
     backgroundColor: BLOG_BACKGROUND_COLOR,
     boxShadow: BOX_SHADOW.MAIN,
@@ -82,10 +82,10 @@ export const indexStyle = {
     boxShadow: BOX_SHADOW.MAIN,
     wordBreak: "break-all",
     padding: `${PADDING.M}`,
-    width: "95%",
+    width: "100%",
     "@media": {
       "screen and (min-width: 768px)": {
-        width: "75%",
+        width: "700px",
       },
     },
   }),
