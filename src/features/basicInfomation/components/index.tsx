@@ -22,7 +22,7 @@ export const BasicInfomation = () => {
             alt="profile main image"
           />
           <Center>
-            <Title className={style.myName} level={4}>
+            <Title className={style.myName} level={3}>
               神尾 拓未
             </Title>
             <div className={style.myAccountContents}>

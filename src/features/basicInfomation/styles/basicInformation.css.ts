@@ -15,5 +15,6 @@ export const style = {
   description: vanilla({
     textAlign: "center",
     marginBottom: "0",
+    fontSize: "16px",
   }),
 };

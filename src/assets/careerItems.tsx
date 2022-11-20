@@ -7,14 +7,18 @@ export const CareerItems = [
     text: "stmn inc (2021/01 - )",
     Details: (
       <div className={assetsStyle.detailsWrapper}>
-        <Title level={4}>開発</Title>
+        <Title level={3}>開発</Title>
+        <hr />
         <Paragraph>
           フロントエンド(React/Typescript)を用いてエンゲージメントプラットフォーム『TUNAG』を開発しています。
         </Paragraph>
         <Paragraph>
           また、RubyOnRailを用いた不具合改善やAPIの作成も行なっています。
         </Paragraph>
-        <Title level={5}>開発した主な機能</Title>
+        <Title className={assetsStyle.textIndent} level={5}>
+          開発した主な機能
+        </Title>
+        <hr />
         <ul className={assetsStyle.ul}>
           <li>
             タイムラインへのHTMLメール投稿
@@ -25,7 +29,8 @@ export const CareerItems = [
           <li>チャットの返信/動画投稿/タスク管理</li>
           <li>カレンダー</li>
         </ul>
-        <Title level={4}>スクラムマスター</Title>
+        <Title level={3}>スクラムマスター</Title>
+        <hr />
         <Paragraph>
           TUNAGの開発体制はスクラム開発を採用しています。4つあるスクラムチーム(1チーム4人)のうちの1つに所属しており、チームのスクラムマスターとしてインペディメントの改善等、チームの透明性の確保や検査と適用がスムーズに行われるようサポートを行なっています。
         </Paragraph>

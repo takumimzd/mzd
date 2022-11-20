@@ -7,11 +7,12 @@ interface Props {
     key: string;
     children: ReactNode;
   }[];
+  className: string;
 }
 
-export const Accordion = ({ items }: Props) => {
+export const Accordion = ({ items, className }: Props) => {
   const panels = items.map((item) => (
-    <Collapse.Panel header={item.header} key={item.key}>
+    <Collapse.Panel className={className} header={item.header} key={item.key}>
       {item.children}
     </Collapse.Panel>
   ));

@@ -9,7 +9,7 @@ export const Profile = () => {
   return (
     <div>
       <div>
-        <Title level={3}>Career</Title>
+        <Title level={2}>Career</Title>
         <Timeline>
           {CareerItems.map((item) => (
             <TimelineItem
@@ -17,11 +17,17 @@ export const Profile = () => {
               key={item.text}
             >
               <>
-                <a href={item.link} target="_blank" rel="noreferrer">
+                <a
+                  href={item.link}
+                  className={profileStyle.carrerText}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {item.text}
                 </a>
                 {item.Details && (
                   <Accordion
+                    className={profileStyle.carrerText}
                     items={[
                       {
                         header: "more",
@@ -37,15 +43,17 @@ export const Profile = () => {
         </Timeline>
       </div>
       <div>
-        <Title level={3}>Skill</Title>
-        <Title level={4}>Frontend</Title>
-        <Paragraph>
+        <Title level={2}>Skill</Title>
+        <Title level={3}>Frontend</Title>
+        <Paragraph className={profileStyle.carrerText}>
           Javascript / Typescript / React.js / Next.js / Redux
         </Paragraph>
-        <Title level={4}>Backend</Title>
-        <Paragraph>Ruby / RubyOnRails / Nest.js</Paragraph>
-        <Title level={4}>Infrastructure</Title>
-        <Paragraph>
+        <Title level={3}>Backend</Title>
+        <Paragraph className={profileStyle.carrerText}>
+          Ruby / RubyOnRails / Nest.js
+        </Paragraph>
+        <Title level={3}>Infrastructure</Title>
+        <Paragraph className={profileStyle.carrerText}>
           AWS(AWS Certified Solutions Architect - Associate - 2022/10/31)
         </Paragraph>
       </div>

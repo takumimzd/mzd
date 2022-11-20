@@ -23,7 +23,7 @@ export const OtherBlogList = ({ enableEdit }: Props) => {
 
   return (
     <div>
-      <Title level={3}>Other</Title>
+      <Title level={2}>Other</Title>
       <List
         layout="horizontal"
         dataSource={blogs}

@@ -1,4 +1,3 @@
-import { MARGIN, PADDING } from "@/constants/style";
 import { listStyle } from "../../styles/blog.css";
 import { TechBlogItems } from "@/assets/blog/blogItems";
 
@@ -16,7 +15,7 @@ export const BlogList = ({ enableEdit = false }: Props) => {
   return (
     <>
       <div className={listStyle.techBlogListWrapper}>
-        <Title level={3}>Tech</Title>
+        <Title level={2}>Tech</Title>
         <List
           layout="horizontal"
           dataSource={TechBlogItems}

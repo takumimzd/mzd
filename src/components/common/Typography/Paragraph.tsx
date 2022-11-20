@@ -8,7 +8,7 @@ interface Props {
 
 export const Paragraph = ({ children, className }: Props) => {
   return (
-    <Typography.Paragraph className={className}>
+    <Typography.Paragraph strong className={className}>
       {children}
     </Typography.Paragraph>
   );

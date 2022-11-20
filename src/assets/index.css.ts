@@ -6,6 +6,9 @@ export const assetsStyle = {
     backgroundColor: BOLD_BACKGROUND_COLOR,
     padding: PADDING.M,
   }),
+  textIndent: style({
+    textIndent: "1rem",
+  }),
   ul: style({
     marginBottom: MARGIN.M,
   }),
