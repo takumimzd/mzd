@@ -6,14 +6,13 @@ import { Center } from "@/components/common/Layout";
 import { Tooltip } from "@/components/common/Tooltip";
 import { CaretRightOutlined } from "@/components/common/Icon";
 import { Switch } from "@/components/common/Switch";
+import { Button } from "@/components/common/Button";
 
 import { Form } from "@/features/blog/components/New/Form/Form";
 import { Preview } from "@/features/blog/components/Preview";
 import { useCreateBlog } from "@/features/blog/hooks/useCreateBlog";
 
 import { useSession } from "@/hooks/useSession";
-import { useIsPcWindow } from "@/hooks/useIsPcWindow";
-import { Button } from "antd";
 
 const New = () => {
   const { isSignedIn } = useSession();
@@ -26,13 +25,12 @@ const New = () => {
     createBlog,
   } = useCreateBlog();
   const [isPreview, setIsPreview] = useState(false);
-  const { isPc } = useIsPcWindow();
 
   const onChangeViewSwitch = () => {
     setIsPreview((prev) => !prev);
   };
 
-  if (isPc === undefined || !isSignedIn) return null;
+  if (!isSignedIn) return null;
 
   return (
     <>
@@ -46,20 +44,21 @@ const New = () => {
       </Center>
       <Center className={adminStyle.formAndPreviewContainer}>
         {isPreview ? (
-          <Preview title={title} bodyText={bodyText} isPc={isPc} />
+          <Preview title={title} bodyText={bodyText} />
         ) : (
           <Form
             bodyText={bodyText}
             onChangeBodyTextarea={onChangeBodyTextarea}
             title={title}
             onChangeTitleInput={onChangeTitleInput}
-            isPc={isPc}
           />
         )}
       </Center>
       <Center>
         <div className={adminStyle.buttonContainer}>
-          <Button className={adminStyle.saveButtonContainer}>Saved</Button>
+          <Button onClick={() => {}} className={adminStyle.saveButtonContainer}>
+            Saved
+          </Button>
           <Button
             onClick={createBlog}
             className={adminStyle.updateButtonContainer}

@@ -5,7 +5,6 @@ import { MarkdownView } from "@/components/common/Markdown";
 import { Title } from "@/components/common/Typography";
 
 interface Props {
-  isPc: boolean;
   bodyText: string;
   title: string;
 }

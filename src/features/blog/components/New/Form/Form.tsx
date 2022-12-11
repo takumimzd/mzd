@@ -10,7 +10,6 @@ interface Props {
   onChangeBodyTextarea: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   title: string;
   onChangeTitleInput: (event: ChangeEvent<HTMLInputElement>) => void;
-  isPc: boolean;
 }
 
 export const Form = ({
@@ -18,7 +17,6 @@ export const Form = ({
   onChangeBodyTextarea,
   title,
   onChangeTitleInput,
-  isPc,
 }: Props) => {
   return (
     <CommonForm className={newStyle.form}>

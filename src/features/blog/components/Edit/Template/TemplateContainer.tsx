@@ -8,10 +8,9 @@ import { Template } from "./Template";
 
 interface Props {
   blog: BlogType;
-  isPc: boolean;
 }
 
-export const TemplateContainer = ({ blog, isPc }: Props) => {
+export const TemplateContainer = ({ blog }: Props) => {
   const {
     bodyText,
     onChangeBodyTextarea,
@@ -28,7 +27,6 @@ export const TemplateContainer = ({ blog, isPc }: Props) => {
 
   return (
     <Template
-      isPc={isPc}
       bodyText={bodyText}
       onChangeBodyTextarea={onChangeBodyTextarea}
       title={title}

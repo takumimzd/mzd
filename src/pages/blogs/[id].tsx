@@ -11,12 +11,8 @@ import { Title } from "@/components/common/Typography";
 
 import { useGetBlog } from "@/features/blog/hooks/useGetBlog";
 
-import { useIsPcWindow } from "@/hooks/useIsPcWindow";
-
 const Blog = () => {
   const { blog, isLoading, error } = useGetBlog();
-
-  const { isPc } = useIsPcWindow();
 
   const breadcrumbItems = [
     <div key="Home">
@@ -27,7 +23,7 @@ const Blog = () => {
     </div>,
   ];
 
-  if (isLoading || !blog || isPc === undefined || error) return null;
+  if (isLoading || !blog || error) return null;
 
   return (
     <div className={indexStyle.wrapper}>

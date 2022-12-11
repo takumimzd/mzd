@@ -12,7 +12,6 @@ import { Form } from "@/features/blog/components/New/Form/Form";
 import { Preview } from "@/features/blog/components/Preview";
 
 interface Props {
-  isPc: boolean;
   bodyText: string;
   onChangeBodyTextarea: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   title: string;
@@ -23,7 +22,6 @@ interface Props {
 }
 
 export const Template = ({
-  isPc,
   bodyText,
   onChangeBodyTextarea,
   title,
@@ -44,14 +42,13 @@ export const Template = ({
       </Center>
       <Center className={editStyle.formAndPreviewContainer}>
         {isPreview ? (
-          <Preview title={title} bodyText={bodyText} isPc={isPc} />
+          <Preview title={title} bodyText={bodyText} />
         ) : (
           <Form
             bodyText={bodyText}
             onChangeBodyTextarea={onChangeBodyTextarea}
             title={title}
             onChangeTitleInput={onChangeTitleInput}
-            isPc={isPc}
           />
         )}
       </Center>
