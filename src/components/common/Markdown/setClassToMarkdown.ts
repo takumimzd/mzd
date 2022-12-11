@@ -1,7 +1,7 @@
 import { BOX_SHADOW } from "@/constants/style";
 import { style } from "./markdown.css";
 
-export const setClassToTable = (element: HTMLDivElement) => {
+export const setClassToMarkdown = (element: HTMLDivElement) => {
   const tableTag = element.getElementsByTagName("table");
   Array.from(tableTag).forEach((elm) => {
     elm.style.tableLayout = "auto";
