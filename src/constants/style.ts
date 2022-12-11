@@ -23,6 +23,10 @@ export const PADDING = {
   L: "32px",
 };
 
+export const BORDER_COLOR = {
+  MAIN: COLORS.GRAY[100],
+};
+
 export const BOX_SHADOW = {
   MAIN: "0px 3px 3px rgba(0, 0, 0, 0.2)",
 };

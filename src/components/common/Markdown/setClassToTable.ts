@@ -1,4 +1,5 @@
 import { BOX_SHADOW } from "@/constants/style";
+import { style } from "./markdown.css";
 
 export const setClassToTable = (element: HTMLDivElement) => {
   const tableTag = element.getElementsByTagName("table");
@@ -31,5 +32,11 @@ export const setClassToTable = (element: HTMLDivElement) => {
   const tbodyTag = element.getElementsByTagName("tbody");
   Array.from(tbodyTag).forEach((elm) => {
     elm.classList.add("ant-table-tbody");
+  });
+
+  const blockquoteTag = element.getElementsByTagName("blockquote");
+  Array.from(blockquoteTag).forEach((elm) => {
+    elm.classList.add(`${style.blockquote}`);
+    elm.children[0].classList.add(`${style.blockquoteP}`);
   });
 };

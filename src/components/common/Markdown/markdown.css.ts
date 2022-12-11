@@ -1,3 +1,4 @@
+import { BORDER_COLOR, PADDING } from "@/constants/style";
 import { style as vanilla } from "@vanilla-extract/css";
 
 export const style = {
@@ -8,5 +9,13 @@ export const style = {
     background: "rgba(150, 150, 150, 0.1)",
     border: "1px solid rgba(100, 100, 100, 0.2)",
     borderRadius: "3px",
+  }),
+  blockquote: vanilla({
+    borderLeft: `3px solid ${BORDER_COLOR.MAIN}`,
+    padding: `${PADDING.M} 0`,
+  }),
+  blockquoteP: vanilla({
+    paddingLeft: PADDING.L,
+    margin: 0,
   }),
 };

@@ -2,6 +2,9 @@ import { useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ReactMarkdownOptions } from "react-markdown/lib/react-markdown";
+
+import { style } from "./markdown.css";
+
 import { CodeBlock } from ".";
 import { setClassToTable } from "./setClassToTable";
 
