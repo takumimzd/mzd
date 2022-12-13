@@ -6,6 +6,14 @@ export const TechBlogItems = [
   {
     icon: `${profileMainImage.src}`,
     title:
+      "インペディメントリスト 〜スクラムチームの一番重要な問題を改善し続ける方法〜",
+    date: "2022/12/13",
+    link: "https://tech.stmn.co.jp/entry/2022/12/13/162849",
+    isExternalLink: true,
+  },
+  {
+    icon: `${profileMainImage.src}`,
+    title:
       "共通UIコンポーネントで速くクオリティの高いプロダクトを開発をしたい。",
     date: "2022/08/16",
     link: "https://tech.stmn.co.jp/entry/2022/08/16/153454",
