@@ -1,4 +1,9 @@
-import { BORDER_COLOR, PADDING } from "@/constants/style";
+import {
+  BLOG_BACKGROUND_COLOR,
+  BORDER_COLOR,
+  BOX_SHADOW,
+  PADDING,
+} from "@/constants/style";
 import { style as vanilla } from "@vanilla-extract/css";
 
 export const style = {
@@ -17,5 +22,22 @@ export const style = {
   blockquoteP: vanilla({
     paddingLeft: PADDING.L,
     margin: 0,
+  }),
+};
+
+export const previewStyle = {
+  previewWrapper: vanilla({
+    "@media": {
+      "screen and (min-width: 768px)": {
+        width: "700px",
+        minHeight: "500px",
+      },
+    },
+    width: "100%",
+    minHeight: "300px",
+    backgroundColor: BLOG_BACKGROUND_COLOR,
+    boxShadow: BOX_SHADOW.MAIN,
+    wordBreak: "break-all",
+    padding: `${PADDING.M}`,
   }),
 };

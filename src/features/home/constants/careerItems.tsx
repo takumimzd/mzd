@@ -1,12 +1,12 @@
 import { Paragraph, Title } from "@/components/common/Typography";
-import { assetsStyle } from "./index.css";
+import { carrerItemStyle } from "@/features/home/styles/profile.css";
 
 export const CareerItems = [
   {
     link: "https://stmn.co.jp/",
     text: "stmn inc (2021/01 - )",
     Details: (
-      <div className={assetsStyle.detailsWrapper}>
+      <div className={carrerItemStyle.detailsWrapper}>
         <Title level={3}>開発</Title>
         <hr />
         <Paragraph>
@@ -15,11 +15,11 @@ export const CareerItems = [
         <Paragraph>
           また、RubyOnRailを用いた不具合改善やAPIの作成も行なっています。
         </Paragraph>
-        <Title className={assetsStyle.textIndent} level={5}>
+        <Title className={carrerItemStyle.textIndent} level={5}>
           開発した主な機能
         </Title>
         <hr />
-        <ul className={assetsStyle.ul}>
+        <ul className={carrerItemStyle.ul}>
           <li>
             タイムラインへのHTMLメール投稿
             (特定のHTMLメールを受信した時に、それを投稿の一部として表示する機能)

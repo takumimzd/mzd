@@ -1,3 +1,3 @@
-import { Template } from "../template";
+import { Template } from "@/features/home/components/template";
 
 export const Environment = () => <Template />;

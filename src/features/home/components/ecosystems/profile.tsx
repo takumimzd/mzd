@@ -1,5 +1,5 @@
-import { CareerItems } from "@/assets/careerItems";
-import { profileStyle } from "../../styles/profile.css";
+import { CareerItems } from "@/features/home/constants/careerItems";
+import { profileStyle } from "@/features/home/styles/profile.css";
 
 import { Accordion } from "@/components/common/Accordion";
 import { Timeline, TimelineItem } from "@/components/common/Timeline";

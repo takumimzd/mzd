@@ -1,9 +1,4 @@
-import {
-  BLOG_BACKGROUND_COLOR,
-  BOX_SHADOW,
-  MARGIN,
-  PADDING,
-} from "@/constants/style";
+import { MARGIN } from "@/constants/style";
 import { style } from "@vanilla-extract/css";
 
 export const editStyle = {
@@ -22,5 +17,19 @@ export const editStyle = {
   }),
   updateButtonContainer: style({
     marginLeft: MARGIN.S,
+  }),
+};
+
+export const newStyle = {
+  form: style({
+    "@media": {
+      "screen and (min-width: 768px)": {
+        width: "700px",
+      },
+    },
+    width: "100%",
+  }),
+  formItem: style({
+    marginBottom: "0",
   }),
 };

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import profileMainImage from "@/public/profile.webp";
-import { indexStyle } from "../../../styles/blog.css";
+import { indexStyle } from "@/features/blog/styles/blog.css";
 
 import { MarkdownView } from "@/components/common/Markdown";
 import { Breadcrumb } from "@/components/common/Breadcrumb";

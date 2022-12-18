@@ -1,7 +1,7 @@
 import profileMainImage from "@/public/profile.webp";
-import { MyAccountItems } from "@/assets/myAccountItems";
+import { MyAccountItems } from "@/features/home/constants/myAccountItems";
 
-import { style } from "../../styles/basicInformation.css";
+import { style } from "@/features/home/styles/basicInformation.css";
 
 import { Center } from "@/components/common/Layout";
 import { CircleImage } from "@/components/common/Image";

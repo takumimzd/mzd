@@ -1,5 +1,5 @@
-import { listStyle } from "../../../styles/blog.css";
-import { TechBlogItems } from "@/assets/blog/blogItems";
+import { listStyle } from "@/features/blog/styles/blog.css";
+import { TechBlogItems } from "@/features/blog/constants/blogItems";
 
 import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";

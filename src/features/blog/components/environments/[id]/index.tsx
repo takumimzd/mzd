@@ -1,5 +1,5 @@
 import { useGetBlog } from "@/features/blog/hooks/useGetBlog";
-import { Template } from "../../templates/[id]";
+import { Template } from "@/features/blog/components/templates/[id]";
 
 export const Environment = () => {
   const { blog, isLoading, error } = useGetBlog();

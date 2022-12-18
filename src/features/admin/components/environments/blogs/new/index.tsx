@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useCreateBlog } from "@/features/blog/hooks/useCreateBlog";
 
 import { useSession } from "@/hooks/useSession";
-import { Template } from "../../../templates/blogs/new";
+
+import { useCreateBlog } from "@/features/blog/hooks/useCreateBlog";
+import { Template } from "@/features/admin/components/templates/blogs/new";
 
 export const Environment = () => {
   const { isSignedIn } = useSession();

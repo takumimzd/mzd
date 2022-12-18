@@ -1,5 +1,6 @@
 import { ChangeEvent } from "react";
-import { adminStyle } from "../../../../styles/admin.css";
+
+import { adminStyle } from "@/features/admin/styles/admin.css";
 
 import { Center } from "@/components/common/Layout";
 import { Tooltip } from "@/components/common/Tooltip";

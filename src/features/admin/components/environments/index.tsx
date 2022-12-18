@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BlogList } from "../../../blog/components/ecosystems/blog-list/List";
+import { BlogList } from "@/features/blog/components/ecosystems/blog-list/List";
 
 export const Environment = () => {
   return (
