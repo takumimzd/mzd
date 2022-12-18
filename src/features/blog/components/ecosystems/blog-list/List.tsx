@@ -1,11 +1,11 @@
-import { listStyle } from "../../styles/blog.css";
+import { listStyle } from "../../../styles/blog.css";
 import { TechBlogItems } from "@/assets/blog/blogItems";
 
 import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
 import { List, Item, ItemMeta } from "@/components/common/List";
 
-import { OtherBlogList } from "./OtherBlogList/OtherBlogList";
+import { OtherBlogList } from "./other-blog-list/OtherBlogList";
 
 interface Props {
   enableEdit?: boolean;

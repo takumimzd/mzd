@@ -1,4 +1,4 @@
-import { previewStyle } from "../styles/blog.css";
+import { previewStyle } from "../../../features/blog/styles/blog.css";
 
 import { Center } from "@/components/common/Layout";
 import { MarkdownView } from "@/components/common/Markdown";

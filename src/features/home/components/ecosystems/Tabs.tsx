@@ -1,8 +1,8 @@
 import { Tabs as CommonTabs } from "@/components/common/Tab";
 
-import { Profile } from "@/features/profile/components";
-import { BlogList } from "@/features/blog/components/List/List";
-import { Admin } from "@/features/admin/components";
+import { Profile } from "@/features/home/components/ecosystems/profile";
+import { BlogList } from "@/features/blog/components/ecosystems/blog-list/List";
+import { Environment } from "@/features/admin/components/environments";
 
 import { useSession } from "@/hooks/useSession";
 
@@ -35,7 +35,7 @@ export const Tabs = () => {
       key: "admin",
       children: (
         <>
-          <Admin />
+          <Environment />
         </>
       ),
     });

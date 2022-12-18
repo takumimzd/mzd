@@ -1,6 +1,6 @@
 import Link from "next/link";
 import profileMainImage from "@/public/profile.webp";
-import { listStyle } from "../../../styles/blog.css";
+import { listStyle } from "../../../../styles/blog.css";
 
 import { Item, ItemMeta, List } from "@/components/common/List";
 import { Title } from "@/components/common/Typography";

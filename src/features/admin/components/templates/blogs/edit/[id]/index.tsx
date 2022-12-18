@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 
-import { editStyle } from "../../../styles/blog.css";
+import { editStyle } from "../../../../../styles/blog.css";
 
 import { Center } from "@/components/common/Layout";
 import { Tooltip } from "@/components/common/Tooltip";
@@ -8,8 +8,8 @@ import { CaretRightOutlined } from "@/components/common/Icon";
 import { Switch } from "@/components/common/Switch";
 import { Button } from "@/components/common/Button";
 
-import { Form } from "@/features/blog/components/New/Form/Form";
-import { Preview } from "@/features/blog/components/Preview";
+import { Form } from "@/features/admin/components/ecosystems/blogs/new/form/Form";
+import { Preview } from "@/components/common/Markdown/Preview";
 
 interface Props {
   bodyText: string;

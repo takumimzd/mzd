@@ -1,38 +1,35 @@
 import { useState } from "react";
+import { useCreateBlog } from "@/features/blog/hooks/useCreateBlog";
 
-import { BlogType } from "@/types/supabase/table";
+import { useSession } from "@/hooks/useSession";
+import { Template } from "../../../templates/blogs/new";
 
-import { useUpdateBlog } from "@/features/blog/hooks/useUpdateBlog";
+export const Environment = () => {
+  const { isSignedIn } = useSession();
 
-import { Template } from "./Template";
-
-interface Props {
-  blog: BlogType;
-}
-
-export const TemplateContainer = ({ blog }: Props) => {
   const {
     bodyText,
     onChangeBodyTextarea,
     title,
     onChangeTitleInput,
-    updateBlog,
-  } = useUpdateBlog({ blog });
-
+    createBlog,
+  } = useCreateBlog();
   const [isPreview, setIsPreview] = useState(false);
 
   const onChangeViewSwitch = () => {
     setIsPreview((prev) => !prev);
   };
 
+  if (!isSignedIn) return null;
+
   return (
     <Template
-      bodyText={bodyText}
       onChangeBodyTextarea={onChangeBodyTextarea}
-      title={title}
       onChangeTitleInput={onChangeTitleInput}
-      updateBlog={updateBlog}
       onChangeViewSwitch={onChangeViewSwitch}
+      createBlog={createBlog}
+      title={title}
+      bodyText={bodyText}
       isPreview={isPreview}
     />
   );

@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { newStyle } from "../../../styles/blog.css";
+import { newStyle } from "../../../../../../blog/styles/blog.css";
 
 import { Form as CommonForm, FormItem } from "@/components/common/Form";
 import { Input } from "@/components/common/Input";

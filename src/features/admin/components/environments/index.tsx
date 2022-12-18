@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { BlogList } from "../../blog/components/List/List";
+import { BlogList } from "../../../blog/components/ecosystems/blog-list/List";
 
-export const Admin = () => {
+export const Environment = () => {
   return (
     <div>
       <Link href="/admin/blogs/new">

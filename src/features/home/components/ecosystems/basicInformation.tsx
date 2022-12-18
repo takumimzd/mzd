@@ -1,14 +1,14 @@
 import profileMainImage from "@/public/profile.webp";
 import { MyAccountItems } from "@/assets/myAccountItems";
 
-import { style } from "../styles/basicInformation.css";
+import { style } from "../../styles/basicInformation.css";
 
 import { Center } from "@/components/common/Layout";
 import { CircleImage } from "@/components/common/Image";
 import { Title, Paragraph } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
 
-export const BasicInfomation = () => {
+export const BasicInformation = () => {
   return (
     <div>
       <Center>
