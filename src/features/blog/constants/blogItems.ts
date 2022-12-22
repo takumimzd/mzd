@@ -5,6 +5,13 @@ import { OtherBlogItemType } from "@/types/blog";
 export const TechBlogItems = [
   {
     icon: `${profileMainImage.src}`,
+    title: "スケルトンスクリーンを小さく導入してみた",
+    date: "2022/12/22",
+    link: "https://tech.stmn.co.jp/entry/2022/12/22/184952",
+    isExternalLink: true,
+  },
+  {
+    icon: `${profileMainImage.src}`,
     title:
       "インペディメントリスト 〜スクラムチームの一番重要な問題を改善し続ける方法〜",
     date: "2022/12/13",
