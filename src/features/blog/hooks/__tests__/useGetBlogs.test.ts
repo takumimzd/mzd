@@ -5,9 +5,7 @@ import { blogsMock } from "@/mocks/handlers/blog";
 
 describe("useFetchUsers", () => {
   beforeAll(() => server.listen());
-  afterEach(() => {
-    server.resetHandlers();
-  });
+  afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
 
   test("ブログ一覧の取得成功", async () => {
