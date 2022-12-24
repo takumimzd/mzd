@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "watch-type": "tsc --watch",
-    "test": "jest"
+    "test": "env NODE_ENV=test jest --ci"
   },
   "dependencies": {
     "@supabase/supabase-js": "1.35.7",
