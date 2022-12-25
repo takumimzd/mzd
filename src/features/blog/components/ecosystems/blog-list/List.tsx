@@ -5,7 +5,7 @@ import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
 import { List, Item, ItemMeta } from "@/components/common/List";
 
-import { OtherBlogList } from "./other-blog-list/OtherBlogList";
+import { OtherBlog } from "./other-blog/OtherBlog";
 
 interface Props {
   enableEdit?: boolean;
@@ -13,7 +13,7 @@ interface Props {
 
 export const BlogList = ({ enableEdit = false }: Props) => {
   return (
-    <>
+    <div>
       <div className={listStyle.techBlogListWrapper}>
         <Title level={2}>Tech</Title>
         <List
@@ -32,7 +32,7 @@ export const BlogList = ({ enableEdit = false }: Props) => {
           )}
         />
       </div>
-      <OtherBlogList enableEdit={enableEdit} />
-    </>
+      <OtherBlog enableEdit={enableEdit} />
+    </div>
   );
 };

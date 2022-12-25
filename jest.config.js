@@ -13,6 +13,9 @@ const customJestConfig = {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   globalSetup: "<rootDir>/setupEnv.ts",
+  transform: {
+    "\\.css\\.ts$": "@vanilla-extract/jest-transform",
+  },
 };
 
 module.exports = async (...args) => {
@@ -26,6 +29,14 @@ module.exports = async (...args) => {
       return pattern;
     }
   );
+
+  // vanilla-extractのcss.tsを読み込めるようにする
+  const cssCodeFileMatcher = "^.+\\.(css|sass|scss)$";
+  delete config["moduleNameMapper"]?.[cssCodeFileMatcher];
+  const tsCodeFileMatcher = "^.+\\.(js|jsx|ts|tsx|mjs)$";
+  const tsCodeTransform = config["transform"]?.[tsCodeFileMatcher];
+  delete config["transform"]?.[tsCodeFileMatcher];
+  config["transform"][tsCodeFileMatcher] = tsCodeTransform;
 
   return config;
 };
