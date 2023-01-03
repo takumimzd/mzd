@@ -1,5 +1,5 @@
 import zennProfileImage from "@/public/zenn-profile.jpg";
-import profileMainImage from "@/public/profile.webp";
+import profileMainImage from "@/public/profile.jpg";
 import { OtherBlogItemType } from "@/types/blog";
 
 export const TechBlogItems = [

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import profileMainImage from "@/public/profile.webp";
+import profileMainImage from "@/public/profile.jpg";
 import { listStyle } from "@/features/blog/styles/blog.css";
 
 import { Item, ItemMeta, List } from "@/components/common/List";

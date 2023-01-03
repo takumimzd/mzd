@@ -1,4 +1,4 @@
-import profileMainImage from "@/public/profile.webp";
+import profileMainImage from "@/public/profile.jpg";
 import { MyAccountItems } from "@/features/home/constants/myAccountItems";
 
 import { style } from "@/features/home/styles/basicInformation.css";

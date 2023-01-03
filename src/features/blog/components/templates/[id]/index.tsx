@@ -1,5 +1,5 @@
 import Link from "next/link";
-import profileMainImage from "@/public/profile.webp";
+import profileMainImage from "@/public/profile.jpg";
 import { indexStyle } from "@/features/blog/styles/blog.css";
 
 import { MarkdownView } from "@/components/common/Markdown";
