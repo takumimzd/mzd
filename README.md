@@ -8,8 +8,6 @@
 
 - Next.js
 - Ant Design
-- vanilla-extract
-- react-markdown
 
 ### Backend
 
