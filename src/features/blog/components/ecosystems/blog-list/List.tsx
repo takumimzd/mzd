@@ -5,11 +5,7 @@ import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
 import { List, Item, ItemMeta } from "@/components/common/List";
 
-interface Props {
-  enableEdit?: boolean;
-}
-
-export const BlogList = ({ enableEdit = false }: Props) => {
+export const BlogList = () => {
   return (
     <div>
       <div className={listStyle.techBlogListWrapper}>
