@@ -5,8 +5,6 @@ import { Title } from "@/components/common/Typography";
 import { Avatar } from "@/components/common/Avatar";
 import { List, Item, ItemMeta } from "@/components/common/List";
 
-import { OtherBlog } from "./other-blog/OtherBlog";
-
 interface Props {
   enableEdit?: boolean;
 }
@@ -32,7 +30,6 @@ export const BlogList = ({ enableEdit = false }: Props) => {
           )}
         />
       </div>
-      <OtherBlog enableEdit={enableEdit} />
     </div>
   );
 };
